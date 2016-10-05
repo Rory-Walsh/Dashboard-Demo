@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>eSORT wireframes</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
+	<!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	    <!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">eSort Admin v1.0</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    Doc Alpha
+                                    <span class="pull-right text-muted small">revision due: 01 Jan 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <div>
+                                    Doc Omega
+                                    <span class="pull-right text-muted small">revision due: 01 Jan 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> [User Name] <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+				<li><a href="index.html"><i class="fa fa-home"></i>&nbsp;Dashboard</a></li>
+				<li><a href="attributes.html"><i class="fa fa-sitemap"></i>&nbsp;PPP Navigation</a></li>
+				<li><a href="ppp.html"><i class="fa fa-sticky-note"></i>&nbsp;PPP list</a></li>
+				<li><a href="alerts.html"><i class="fa fa-bell"></i>&nbsp;Notifications</a></li>
+				<li><a href="schools.html"><i class="fa fa-university"></i>&nbsp;Schools</a></li>
+				<li><a href="reports.html"><i class="fa fa-area-chart"></i>&nbsp;Reports</a></li>
+                    
+                    </ul>
+                </div>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">PPP Categories &amp; Attributes</h1>
+				</div>
+				<!-- /.col-lg-12 -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel panel-info">
+						<div class="panel-heading clearfix">
+							<button type="button" class="btn btn-success pull-right"><i class="fa fa-plus"></i>&nbsp;Add New</button>
+							<h4 class="panel-title">Policies, Prodcedures &amp; Practices Categories </h4>
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>
+									<a href="#">Compliance & Statutory Requirements</a>
+									<ul>
+										<li>
+											<a href="#">Victorian Requirements</a>
+											<ul>
+												<li>
+													<a href="#" class="active" style="color:#333; text-decoration:underline;">School Governance</a>
+												</li>
+												<li>
+													<a href="#">Enrolment</a>
+												</li>
+												<li>
+													<a href="#">Curriculum & Student Learning</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Australian Requirements</a>
+											<ul>
+												<li>
+													<a href="#">Principal & Teacher Performance &amp; Professional Development</a>
+												</li>
+												<li>
+													<a href="#">Implementation of a Recognized Curriculum</a>
+												</li>
+												<li>
+													<a href="#">National Assessment Program</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="#">Organizational &amp; Governance Requirements (Diocesan)</a>
+									<ul>
+										<li>
+											<a href="#">Governance, Visioin &amp; Strategic Directions</a>
+										</li>
+										<li>
+											<a href="#">Curriculum &amp; Student Outcomes</a>
+										</li>
+										<li>
+											<a href="#">OHS &amp; Property</a>
+											<ul>
+												<li>
+													<a href="#">Policy</a>
+												</li>
+												<li>
+													<a href="#">Preventing/Managing Workplace Injuries/Incidents</a>
+												</li>
+												<li>
+													<a href="#">Maintenance</a>
+												</li>
+												<li>
+													<a href="#">Master Facility Planning</a>
+												</li>
+											</ul>
+											<!-- /.nav-third-level -->
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="#">Potential Risks</a>
+									<ul>
+										<li>
+											<a href="#">Second Level Item</a>
+										</li>
+										<li>
+											<a href="#">Second Level Item</a>
+										</li>
+										<li>
+											<a href="#">Third Level</a>
+											<ul>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+											</ul>
+											<!-- /.nav-third-level -->
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<div class="panel-footer"><small>* need common tree view control, category movement allowed but PPP's can only be added at end node level, so need to validate this and have UI in a way that this is understood</small></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-info">
+						<div class="panel-heading clearfix">
+							<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>&nbsp;Add PPP</button>
+							<h4 class="panel-title">PPP's for School Governance</h4>
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item clearfix">
+								<div class="pull-right">
+									<a href="ppp.html" class="btn btn-default">View</a> <button type="button" class="btn btn-default">Remove</button>
+									
+								</div>
+								<div>Democratic principles</div>
+							</li>
+							<li class="list-group-item clearfix">
+								<div class="pull-right">
+									<a href="ppp.html" class="btn btn-default">View</a> <button type="button" class="btn btn-default">Remove</button>
+								</div>
+								<div>Structure</div>
+							</li>
+							<li class="list-group-item clearfix">
+								<div class="pull-right">
+									<a href="ppp.html" class="btn btn-default">View</a> <button type="button" class="btn btn-default">Remove</button>
+								</div>
+								<div>Probity</div>
+							</li>
+							<li class="list-group-item clearfix">
+								<div class="pull-right">
+									<a href="ppp.html" class="btn btn-default">View</a> <button type="button" class="btn btn-default">Remove</button>
+								</div>
+								<div>Philosophy</div>
+							</li>
+							<li class="list-group-item clearfix">
+								<div class="pull-right">
+									<a href="ppp.html" class="btn btn-default">View</a> <button type="button" class="btn btn-default">Remove</button>
+								</div>
+								<div>Not-for-profit status</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /#page-wrapper -->
+		</div>
+		<!-- /#wrapper -->
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">PPP List</h4>
+				</div>
+				<div class="modal-body"><div class="form-inline">
+					 <table id="pppTable" width="100%" class="table table-striped table-bordered table-hover">
+						<thead><tr><th>PPP Title</th></tr></thead>
+						<tbody>
+							<tr><td>Alpha <button type="button" class="btn btn-default pull-right">Select</button> </td></tr>
+							<tr><td>Beta <button type="button" class="btn btn-default pull-right">Select</button> </td></tr>
+							<tr><td>Gamma <button type="button" class="btn btn-default pull-right">Select</button> </td></tr>
+							<tr><td>Delta <button type="button" class="btn btn-default pull-right">Select</button> </td></tr>
+						</tbody>
+					</table>
+				</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+	<!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+	    <script>
+    $(document).ready(function() {
+        $('#pppTable').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+</body>
+
+</html>

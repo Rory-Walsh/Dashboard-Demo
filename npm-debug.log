@@ -1,0 +1,228 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Web\\External\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.3.4
+3 info using node@v5.4.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData browser-sync
+20 silly mapToRegistry name browser-sync
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/browser-sync
+24 silly fetchNamedPackageData gulp
+25 silly mapToRegistry name gulp
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/gulp
+29 silly fetchNamedPackageData gulp-clean-css
+30 silly mapToRegistry name gulp-clean-css
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/gulp-clean-css
+34 silly fetchNamedPackageData gulp-header
+35 silly mapToRegistry name gulp-header
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/gulp-header
+39 silly fetchNamedPackageData gulp-less
+40 silly mapToRegistry name gulp-less
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/gulp-less
+44 silly fetchNamedPackageData gulp-rename
+45 silly mapToRegistry name gulp-rename
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry uri https://registry.npmjs.org/gulp-rename
+49 silly fetchNamedPackageData gulp-uglify
+50 silly mapToRegistry name gulp-uglify
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+54 verbose request uri https://registry.npmjs.org/browser-sync
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 8:42:19 AM
+57 verbose request id cbc9239a8a0f1dad
+58 http request GET https://registry.npmjs.org/browser-sync
+59 verbose request uri https://registry.npmjs.org/gulp
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 8:42:19 AM
+62 http request GET https://registry.npmjs.org/gulp
+63 verbose request uri https://registry.npmjs.org/gulp-clean-css
+64 verbose request no auth needed
+65 info attempt registry request try #1 at 8:42:19 AM
+66 http request GET https://registry.npmjs.org/gulp-clean-css
+67 verbose request uri https://registry.npmjs.org/gulp-header
+68 verbose request no auth needed
+69 info attempt registry request try #1 at 8:42:19 AM
+70 http request GET https://registry.npmjs.org/gulp-header
+71 verbose request uri https://registry.npmjs.org/gulp-less
+72 verbose request no auth needed
+73 info attempt registry request try #1 at 8:42:19 AM
+74 http request GET https://registry.npmjs.org/gulp-less
+75 verbose request uri https://registry.npmjs.org/gulp-rename
+76 verbose request no auth needed
+77 info attempt registry request try #1 at 8:42:19 AM
+78 http request GET https://registry.npmjs.org/gulp-rename
+79 verbose request uri https://registry.npmjs.org/gulp-uglify
+80 verbose request no auth needed
+81 info attempt registry request try #1 at 8:42:19 AM
+82 http request GET https://registry.npmjs.org/gulp-uglify
+83 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+84 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+85 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+86 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+87 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+88 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+89 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+90 info attempt registry request try #2 at 8:42:30 AM
+91 http request GET https://registry.npmjs.org/gulp-header
+92 info attempt registry request try #2 at 8:42:30 AM
+93 http request GET https://registry.npmjs.org/browser-sync
+94 info attempt registry request try #2 at 8:42:30 AM
+95 http request GET https://registry.npmjs.org/gulp-uglify
+96 info attempt registry request try #2 at 8:42:30 AM
+97 http request GET https://registry.npmjs.org/gulp-less
+98 info attempt registry request try #2 at 8:42:30 AM
+99 http request GET https://registry.npmjs.org/gulp
+100 info attempt registry request try #2 at 8:42:30 AM
+101 http request GET https://registry.npmjs.org/gulp-clean-css
+102 info attempt registry request try #2 at 8:42:30 AM
+103 http request GET https://registry.npmjs.org/gulp-rename
+104 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+105 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+106 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+107 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+108 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+109 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+110 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
+111 info attempt registry request try #3 at 8:43:31 AM
+112 http request GET https://registry.npmjs.org/browser-sync
+113 info attempt registry request try #3 at 8:43:31 AM
+114 http request GET https://registry.npmjs.org/gulp-uglify
+115 info attempt registry request try #3 at 8:43:31 AM
+116 http request GET https://registry.npmjs.org/gulp-header
+117 info attempt registry request try #3 at 8:43:31 AM
+118 http request GET https://registry.npmjs.org/gulp-less
+119 info attempt registry request try #3 at 8:43:31 AM
+120 http request GET https://registry.npmjs.org/gulp
+121 info attempt registry request try #3 at 8:43:31 AM
+122 http request GET https://registry.npmjs.org/gulp-clean-css
+123 info attempt registry request try #3 at 8:43:31 AM
+124 http request GET https://registry.npmjs.org/gulp-rename
+125 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+125 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+125 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+125 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+125 silly fetchPackageMetaData  error for gulp-clean-css@^2.0.10 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+125 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+125 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+125 silly fetchPackageMetaData   syscall: 'connect',
+125 silly fetchPackageMetaData   address: '151.101.80.162',
+125 silly fetchPackageMetaData   port: 443 }
+126 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+126 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+126 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+126 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+126 silly fetchPackageMetaData  error for gulp-less@^3.1.0 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+126 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+126 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+126 silly fetchPackageMetaData   syscall: 'connect',
+126 silly fetchPackageMetaData   address: '151.101.80.162',
+126 silly fetchPackageMetaData   port: 443 }
+127 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+127 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+127 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+127 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+127 silly fetchPackageMetaData  error for gulp-uglify@^1.5.4 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+127 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+127 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+127 silly fetchPackageMetaData   syscall: 'connect',
+127 silly fetchPackageMetaData   address: '151.101.80.162',
+127 silly fetchPackageMetaData   port: 443 }
+128 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+128 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+128 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+128 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+128 silly fetchPackageMetaData  error for gulp-rename@^1.2.2 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+128 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+128 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+128 silly fetchPackageMetaData   syscall: 'connect',
+128 silly fetchPackageMetaData   address: '151.101.80.162',
+128 silly fetchPackageMetaData   port: 443 }
+129 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+129 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+129 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+129 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+129 silly fetchPackageMetaData  error for gulp-header@^1.8.7 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+129 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+129 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+129 silly fetchPackageMetaData   syscall: 'connect',
+129 silly fetchPackageMetaData   address: '151.101.80.162',
+129 silly fetchPackageMetaData   port: 443 }
+130 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+130 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+130 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+130 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+130 silly fetchPackageMetaData  error for browser-sync@^2.13.0 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+130 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+130 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+130 silly fetchPackageMetaData   syscall: 'connect',
+130 silly fetchPackageMetaData   address: '151.101.80.162',
+130 silly fetchPackageMetaData   port: 443 }
+131 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
+131 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
+131 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
+131 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+131 silly fetchPackageMetaData  error for gulp@^3.9.1 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+131 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+131 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+131 silly fetchPackageMetaData   syscall: 'connect',
+131 silly fetchPackageMetaData   address: '151.101.80.162',
+131 silly fetchPackageMetaData   port: 443 }
+132 silly rollbackFailedOptional Starting
+133 silly rollbackFailedOptional Finishing
+134 silly runTopLevelLifecycles Starting
+135 silly runTopLevelLifecycles Finishing
+136 silly install printInstalled
+137 verbose stack Error: connect ECONNREFUSED 151.101.80.162:443
+137 verbose stack     at Object.exports._errnoException (util.js:856:11)
+137 verbose stack     at exports._exceptionWithHostPort (util.js:879:20)
+137 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+138 verbose cwd c:\inetpub\wwwroot\Dashboard Demo
+139 error Windows_NT 10.0.14393
+140 error argv "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Web\\External\\node.exe" "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js" "install"
+141 error node v5.4.1
+142 error npm  v3.3.4
+143 error code ECONNREFUSED
+144 error errno ECONNREFUSED
+145 error syscall connect
+146 error Error: connect ECONNREFUSED 151.101.80.162:443
+146 error     at Object.exports._errnoException (util.js:856:11)
+146 error     at exports._exceptionWithHostPort (util.js:879:20)
+146 error     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+146 error  { [Error: connect ECONNREFUSED 151.101.80.162:443]
+146 error   code: 'ECONNREFUSED',
+146 error   errno: 'ECONNREFUSED',
+146 error   syscall: 'connect',
+146 error   address: '151.101.80.162',
+146 error   port: 443,
+146 error   parent: 'sb-admin-2' }
+147 error If you are behind a proxy, please make sure that the
+147 error 'proxy' config is set properly.  See: 'npm help config'
+148 verbose exit [ 1, true ]

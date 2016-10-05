@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/tests.css",
+	"sources": [
+		"../sass/tests.scss"
+	],
+	"sourcesContent": [
+		"﻿/*! Documents/sass-test/test.scss */\r\n\r\n/* Sass variables start with the $ sign, \r\n...that's about all that makes it different from LESS syntax :p */\r\n$my_color: #BADA55;\r\n\r\nnav {\r\n  a{\r\n    color: $my_color;\r\n    &:hover {\r\n      color: darken($my_color, 10%);\r\n    }\r\n  }\r\n}\r\n\r\n// Variables\n\n$gray-darker: lighten(#000, 13.5%);\n$gray-dark: lighten(#000, 20%);\n$gray: lighten(#000, 33.5%);\n$gray-light: lighten(#000, 60%);\n$gray-lighter: lighten(#000, 93.5%);\n$gray-lightest: lighten(#000, 97.25%);\n$brand-primary: #428bca;\n$brand-success: #5cb85c;\n$brand-info: #5bc0de;\n$brand-warning: #f0ad4e;\n$brand-danger: #d9534f;\n"
+	],
+	"mappings": "AAAA,oCAAoC;AAEpC;kEACkE;;AAGlE,AACE,GADC,CACD,CAAC,CAAA;EACC,KAAK,EAJE,OAAO;CAQf;;;AANH,AACE,GADC,CACD,CAAC,AAEE,MAAM,CAAC;EACN,KAAK,EAAE,OAAM;CACd",
+	"names": []
+}

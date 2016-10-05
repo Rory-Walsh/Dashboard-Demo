@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>eSORT wireframes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+	<!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- Modal -->
+	<div class="modal fade" id="sectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Notification Section <small>step 1 of 2</small></h4>
+				</div>
+				<div class="modal-body">
+					<div id="step1">
+						<div class="form-group">
+							<label>Section name:</label>
+							<input class="form-control" placeholder="1.2 Governance Structure" />
+						</div>
+						<div class="form-group">
+							<label>Description: </label>
+							<textarea rows="4" class="form-control"></textarea>
+						</div>
+						<div class="form=group">
+							<label>Main supporting PPP:</label>
+							Alpha Centuri <span class="pull-right" style="cursor:pointer" data-toggle="collapse" data-target="#PPPList"><i class="fa fa-search"></i>&nbsp;Filter/Change</span>
+						</div>
+						<div id="PPPList" class="collapse">
+							<div class="well">
+								<table id="pppTable" width="100%" class="table table-striped table-bordered table-hover">
+									<thead><tr><th>PPP Title</th><th></th></tr></thead>
+									<tbody>
+										<tr><td>Alpha</td><td class="text-right"><i class="fa fa-check fa-2x"></i></td></tr>
+										<tr><td>Beta</td><td class="text-right"><i class="fa fa-check fa-2x"></i></td></tr>
+										<tr><td>Gamma</td><td class="text-right"><i class="fa fa-check fa-2x"></i></td></tr>
+										<tr><td>Delta</td><td class="text-right"><i class="fa fa-check fa-2x"></i></td></tr>
+										<tr><td>Omega</td><td class="text-right"><i class="fa fa-check fa-2x"></i></td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div id="step2">
+						<strong>Do you require any optional questions or requirements on this section?</strong>	<span></span>
+						<p>No - <i class="fa fa-level-down"></i> Proceed to save changes</p>
+						<div class="form-group">
+							Yes - <label>Topic that describes the optional list:</label>
+							<textarea type="text" class="form-control" placeholder="e.g. Has the school provided the following evidence to demonstate meeting the standard?" rows="2"></textarea>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="form-group">
+									<label>Question or Requirement:</label>
+									<textarea class="form-control" placeholder="e.g. Documentation which identifies the school's governance structure (including a description of the governing authority)" rows="2"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Response Options</label>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="">Yes/No Answer
+										</label>&nbsp;&nbsp;&nbsp;<i class="fa fa-info-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></i>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="">Must submit supporting evidence
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="">n/a option
+										</label>
+									</div>
+								</div>
+								<div class="pull-right">
+									<button class="btn btn-default" onclick="javascript: $('#tblQuestionList').toggle();"><i class="fa fa-plus"></i>&nbsp;Add Question/Requirement</button>
+								</div>
+							</div>
+							<table id="tblQuestionList" class="table">
+								<thead><tr><td>Current checklist: </td><td></td></tr></thead>
+								<tbody>
+									<tr><td>1.1 An enrolment register that is accurate, up-to-date and contains the information required in the standard.</td><td><a href="#" data-toggle="tooltip" data-placement="left" title="Remove this question/requirement from the list. Note, this can't be removed once the notification has been sent'"><i class="fa fa-trash text-danger"></i></a></td></tr>
+									<tr><td>1.2 Processes and prodcedures to ensure the enrolment register is up-to-date.</td><td><a href="#" data-toggle="tooltip" data-placement="left" title="Remove this question/requirement from the list. Note, this can't be removed once the notification has been sent'"><i class="fa fa-trash text-danger"></i></a></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button id="btnStep1" type="button" class="btn btn-primary" onclick="javascript: nextStep();">Next Step</button>
+					<button id="btnStep2" type="button" class="btn btn-primary"  onclick="javascript: nextStep();">Save changes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal -->
+	<div class="modal fade" id="schoolListModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Available School Recipients</h4>
+				</div>
+				<div class="modal-body">
+					Do we show a simple flat list? Or do we need grouping filters by type?
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">Select/Unselect All
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="" />Alpha
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">Beta
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">Delta
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">Gamma
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">eSort Admin v1.0</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    Doc Alpha
+                                    <span class="pull-right text-muted small">revision due: 01 Jan 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <div>
+                                    Doc Omega
+                                    <span class="pull-right text-muted small">revision due: 01 Jan 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> [User Name] <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+				<li><a href="index.html"><i class="fa fa-home"></i>&nbsp;Dashboard</a></li>
+				<li><a href="attributes.html"><i class="fa fa-sitemap"></i>&nbsp;PPP Navigation</a></li>
+				<li><a href="ppp.html"><i class="fa fa-sticky-note"></i>&nbsp;PPP list</a></li>
+				<li><a href="alerts.html"><i class="fa fa-bell"></i>&nbsp;Notifications</a></li>
+				<li><a href="schools.html"><i class="fa fa-university"></i>&nbsp;Schools</a></li>
+				<li><a href="reports.html"><i class="fa fa-area-chart"></i>&nbsp;Reports</a></li>
+                    
+                    </ul>
+                </div>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                   <h1 class="page-header"> <i class="fa fa-bullhorn"></i> Alerts &amp; Notifications</h1>
+					<div class="alert alert-info alert-dismissable myalert"> <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>Tips &amp; Tricks</strong><br/>
+						<i class="fa fa-info-circle myalert-icon"></i>	You can create new notification campaigns, or use an existing alert from the list below as a template. If the alert is a draft form, state this in your notification title. View notification details to send or resend alerts.
+					</div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+			 <div id="alertList1" class="row">
+                <div class="col-md-12 clearfix">
+					<button class="btn btn-success pull-right" onclick="javascript: alertDetails();"><i class="fa fa-plus"></i>&nbsp;Create New</button>
+					<div class="form-inline">
+                 <div class="form-group">
+						Filters: <label>Date Range: </label> <input placeholder="01 Jan 2000" class="form-control" style="width:120px" />&nbsp;to&nbsp;<input placeholder="today" class="form-control" style="width:120px"/> 
+						&nbsp;&nbsp;<select class="form-control"><option>Sent by...</option></select>&nbsp;&nbsp;<select class="form-control"><option>Contains PPP...</option></select>&nbsp;&nbsp;<select class="form-control"><option>Sent to school...</option></select>
+				 </div></div>
+                </div>
+            </div>
+			 <!-- /.row -->
+			 <div id="alertList2" class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Alert type</th>
+								<th>Last sent</th>
+								<th>Sent by</th>
+								<th>Recipients</th>
+								<th>Read by</th>
+								<th>Complied</th>
+								<th>View</th>
+								<th>Branch</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>VRAQ 2016</td>
+								<td>Revision alert</td>
+								<td>02 Jul 2016</td>
+								<td>John Smith</td>
+								<td>100</td>
+								<td>88</td>
+								<td>75</td>
+								<td><button class="btn btn-default btn-outline">View</button></td>
+								<td><button class="btn btn-default btn-outline">Create from</button></td>
+								<td><button class="btn btn-default btn-outline"><i class="fa fa-remove"></i></button></td>
+							</tr>
+							<tr>
+								<td>Online Risk Review</td>
+								<td>Risk Management</td>
+								<td>14 Mar 2017</td>
+								<td>Mary Jones</td>
+								<td>100</td>
+								<td>88</td>
+								<td>75</td>
+								<td><button class="btn btn-default btn-outline">View</button></td>
+								<td><button class="btn btn-default btn-outline">Create from</button></td>
+								<td><button class="btn btn-default btn-outline"><i class="fa fa-remove"></i></button></td>
+							</tr>
+							<tr>
+								<td>BDSAC 2017</td>
+								<td>Draft</td>
+								<td>31 Oct 2016</td>
+								<td>Rob Clifford</td>
+								<td>100</td>
+								<td>88</td>
+								<td>75</td>
+								<td><button class="btn btn-default btn-outline">View</button></td>
+								<td><button class="btn btn-default btn-outline">Create from</button></td>
+								<td><button class="btn btn-default btn-outline"><i class="fa fa-remove"></i></button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+            <!-- /.row -->
+			<div id="panelDetails" >
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">General Info</h4>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Title</label>
+										<input type="text" class="form-control" />
+									</div>
+									<div class="form-group">
+										<label>Type</label>
+										<select class="form-control">
+											<option>Policy Revision Alert</option>
+											<option>Risk Management Alert</option>
+											<option>Others set in config settings</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3">
+								
+									<div class="form-group">
+										 <label>Response Options</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">&nbsp;Requires a response
+                                                </label>
+                                            </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<label for="txtPickupDate">Date to respond by</label>
+									<div class="input-group date" style="width: 160px">
+										<input name="txtPickUpDate" value="26 Sep 2016" id="txtPickUpDate" class="form-control" type="text">
+										<span class="input-group-addon"><i class="fa fa-th"></i></span>
+									</div>
+								</div>
+							
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Subject/Description</label>
+										<textarea class="form-control" rows="2"></textarea>
+									</div>
+								</div>
+							</div>
+
+							
+						</div>
+						
+					</div>
+				</div>
+		  </div>	
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading clearfix"><div class="pull-right"><button class="btn btn-default"  data-toggle="modal" data-target="#sectionModal"><i class="fa fa-plus"></i>&nbsp;New Section</button></div>
+							<h4 class="panel-title">Sections <small><em>Requires at least one</em></small></h4>
+						</div>
+						<table class="table">
+							<thead><tr><th>Section</th><th></th><th></th><th></th></tr></thead>
+							<tbody>
+								<tr><td><i class="fa fa-link"></i>&nbsp; Structure</td><td><i class="fa fa-pencil fa-2x"></i></td><td><i class="fa fa-trash fa-2x"></i></td><td><i class="fa fa-exchange fa-2x" data-toggle="tooltip" data-placement="top" title="Has requirements for recipient"></i></td></tr>
+								<tr><td><i class="fa fa-link"></i>&nbsp; Probity</td><td><i class="fa fa-pencil fa-2x"></i></td><td><i class="fa fa-trash fa-2x"></i></td><td></td></tr>
+								<tr><td><i class="fa fa-link"></i>&nbsp; Monitoring and reporting on student performance</td><td><i class="fa fa-pencil fa-2x"></i></td><td><i class="fa fa-trash fa-2x"></i></td><td><i class="fa fa-exchange fa-2x" data-toggle="tooltip" data-placement="top" title="Has requirements for recipient"></i></td></tr>
+							</tbody>
+						</table>
+					
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							
+							<h4 class="panel-title">Recipients</h4>
+						</div>
+						<div class="panel-body">
+							<div class="well well-sm">
+								<p>
+								Selected Schools: <strong>26</strong> from a possible <strong>104</strong> Sent: <strong>0</strong> Remaining to be sent: <strong>26</strong></p>
+								<button class="btn btn-default btn-lg btn-block clearfix" data-toggle="modal"  data-target="#schoolListModal"><i class="fa fa-list"></i>&nbsp;View/Edit recipient list</button>
+		<a class="btn btn-default btn-lg btn-block clearfix" target="_blank" href="https://datatables.net/" data-target="#schoolListModal"><i class="fa fa-print"></i> Preview Sent Notification</a>
+		<a class="btn btn-default btn-lg btn-block clearfix" target="_blank" href="https://datatables.net/" data-target="#schoolListModal"><i class="fa fa-send"></i> Send Now</a>
+
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									Total delivered:
+								</div>
+								<div class="col-sm-10">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:100%;">
+											100%
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									Total responded:
+								</div>
+								<div class="col-sm-10">
+									<div class="progress">
+										<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+											60%
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="pull-right">
+						<button class="btn btn-danger"  onclick="javascript: alertDetails();"><i class="fa fa-long-arrow-left"></i>&nbsp;Return to List</button>&nbsp;
+						<button class="btn btn-success"><i class="fa fa-save"></i>&nbsp;Save Changes</button>
+					</div>
+				</div>
+			</div>
+				</div>
+			 <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+		<footer >
+			Footer
+		</footer>
+
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+	
+	<!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+	    <script>
+    $(document).ready(function() {
+    	$('[data-toggle="tooltip"]').tooltip();
+		$("[data-toggle=popover]").popover();
+		$('#panelDetails').toggle();
+		$('#pppTable').DataTable({
+        	responsive: true
+		});
+		$('#btnStep2').hide();
+		$('#step2').hide();
+		$('#tblQuestionList').hide();
+		
+    });
+
+    function nextStep() {
+    	$('#step1').toggle();
+    	$('#btnStep1').toggle();
+    	$('#btnStep2').toggle();
+		$('#step2').toggle();
+    	return false;
+    }
+
+    function alertDetails() {
+		$('#alertList1').toggle();
+		$('#alertList2').toggle();
+		$('#panelDetails').toggle();
+		return false;
+    }
+    </script>
+</body>
+
+</html>
