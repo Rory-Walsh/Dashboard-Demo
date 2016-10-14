@@ -2,22 +2,23 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	
+
     <title>eSORT wireframes</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- MetisMenu CSS -->
+
+    <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -28,7 +29,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -51,13 +52,13 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-bell fa-fw"></i> (2) <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
                             <a href="#">
                                 <div>
-                                    Doc Alpha
+                                    Staff Anti Bullying Policy
                                     <span class="pull-right text-muted small">revision due: 01 Jan 2017</span>
                                 </div>
                             </a>
@@ -65,8 +66,8 @@
                          <li>
                             <a href="#">
                                 <div>
-                                    Doc Omega
-                                    <span class="pull-right text-muted small">revision due: 01 Jan 2017</span>
+                                    CEOB Privaly Policy May 2016
+                                    <span class="pull-right text-muted small">revision due: 01 May 2017</span>
                                 </div>
                             </a>
                         </li>
@@ -113,9 +114,22 @@
 						<li><a href="attributes.html"><i class="fa fa-sitemap"></i>&nbsp;PPP Navigation</a></li>
 						<li><a href="ppp.html"><i class="fa fa-sticky-note"></i>&nbsp;PPP list</a></li>
 						<li><a href="alerts.html"><i class="fa fa-bell"></i>&nbsp;Notifications</a></li>
-						<li><a href="schools.html"><i class="fa fa-university"></i>&nbsp;Schools</a></li>
-						<li><a href="reports.html"><i class="fa fa-area-chart"></i>&nbsp;Reports</a></li>
-                    
+						<li><a href="#"><i class="fa fa-university"></i>&nbsp;Schools<span class="fa arrow"></span></a>
+							 <ul class="nav nav-second-level">
+								<li><a href="schools.html">View List</a></li>
+								 <li><a href="schools.html">View Attributes</a></li>
+							 </ul>
+						</li>
+						<li><a href="#"><i class="fa fa-area-chart"></i>&nbsp;Reports<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="reports.html">General</a></li>
+								<li><a href="reportPPP.html">By PPP</a></li>
+								<li><a href="reportCategory.html">By PPP Category</a></li>
+								<li><a href="reportNotification.html">By Notification</a></li>
+								<li><a href="reportSchool.html">By School</a></li>
+							 </ul>
+						</li>
+						<li><a href="#"><i class="fa fa-info-circle" ></i> About</a></li>
                     </ul>
                 </div>
                 </div>
@@ -124,32 +138,83 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Schools List</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-			 <div class="row">
-                <div class="col-md-12">
-					<div class="callout callout-warning">
-						<h4>Key functions</h4>
-						<p>Add new school to list, view school details and school notification history.<br/><em>Not sure if additional school types need to be included</em> </p>
-					</div> 
-                 <table class="table">
-					 <thead><tr><th>Name</th><th class="text-center">View</th><th class="text-center">Edit Details</th><th>Deactivate</th><th>Last notification</th><th>Active since</th></tr></thead>
-					 <tbody><tr><td>Alpha</td><td class="text-center"><a href="/pages/SIMON.html"><i class="fa fa-eye fa-2x"></i></a></td><td class="text-center"><i class="fa fa-edit fa-2x"></i></td><td></td><td>01 Mar 2022</td><td>01 Jan 2017</td></tr></tbody>
-				 </table>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="pull-right">
+						<address>
+							Date Info<br />
+							Company Info<br />
+							Company Info
+						</address>
 
-    </div>
-    <!-- /#wrapper -->
+					</div>
+					<h1 class="page-headerz">PPP Category by notification summary report</h1><div class="form-groupz">
+						<label>Category: </label>Compliance & Statutory Requirements\Victorian Requirements<br />
+						<label>Date Range: </label> 01 Jan 2000 - 01 Jan 2017
+					</div>
+					<div class="form-group">
+						<div class="alert alert-info alert-dismissable myalert">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							<strong>Report Description</strong><br />
+							<i class="fa fa-info-circle myalert-icon"></i>	This report lists all notifications sent in the selected date range that contain a section linked with a PPP listed under the selected category. 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<table id="details" class="table">
+						<thead><tr><th>Notification</th><th>Sent</th><th>Schools</th><th>Sections</th></tr></thead>
+						<tbody>
+							<tr><td>VRAQ 2016</td><td>01 Oct 2016</td>	<td>120</td>  				<td>14</td></tr>
+							<tr><td>VRAQ 2015</td><td>01 May 2015</td>	<td>100</td>   			<td>13</td></tr>
+							<tr><td>VRAQ 2014</td><td>01 May 2014</td>	<td>88</td>  			<td>13</td></tr>
+							<tr><td>VRAQ draft 2015</td><td>01 June 2015</td>	<td>88</td>  	<td>13</td>  </tr>
+							<tr><td>2014 On subject xyz</td><td>01 May 2016</td>	<td>62</td>  	<td>1</td>   </tr>
+							<tr><td>On BDSAC Guidelines 2012</td><td>01 May 2012</td>	<td>65</td>	<td>4</td> </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="pull-right">
+						<address>
+							Date Info<br />
+							Company Info<br />
+							Company Info
+						</address>
+
+					</div>
+					<h1 class="page-headerz">PPP Category by PPP summary report</h1><div class="form-groupz">
+						<label>Category: </label>Compliance & Statutory Requirements\Victorian Requirements<br />
+						<label>Date Range: </label> 01 Jan 2014 - 01 Jan 2017
+					</div>
+					<div>
+						<div class="alert alert-info alert-dismissable myalert">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							<strong>Report Description</strong><br />
+							<i class="fa fa-info-circle myalert-icon"></i>	This report lists all PPP's sent with notifications in the selected date range that are listed under the selected category. 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<table id="details" class="table">
+						<thead><tr><th>PPP</th><th>Last notification</th><th>Section</th><th>Schools</th><th>Notification Complete</th><th>Section Complete</th></tr></thead>
+						<tbody>
+							<tr>	<td>Enrollments</td>						<td>22 May 2014</td>	<td>3</td>		<td>88</td>		<td>87</td>		<td>86</td>		</tr>
+							<tr>	<td>Curriculum framework</td>				<td>01 Aug 2015</td>	<td>5</td>	<td>99</td>		<td>100</td>	<td>95</td>		</tr>
+							<tr>	<td>Democratic principles</td>				<td>17 May 2016</td>	<td>1</td>	<td>120</td>	<td>120</td>	<td>120</td>	</tr>
+							<tr>	<td>Student Welfare</td>					<td>01 June 2015</td>	<td>1</td>		<td>15</td>		<td>n/a</td>	<td>n/a</td>	</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+   </div>
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -157,11 +222,12 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-	<!-- Metis Menu Plugin JavaScript -->
+    <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
+
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../js/sb-admin-2.js"></script>
 
 </body>
 

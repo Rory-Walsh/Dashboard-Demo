@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SIMON Central demo</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS for side nav -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.navbar-brand { color:#fff !important;}
+		#side-menu li a { color:#555;}
+	</style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SIMON Central</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> (2) <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    School ABC
+                                    <span class="pull-right text-muted small">license expires: 01 Jan 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="#">
+                                <div>
+                                    School XYZ
+                                    <span class="pull-right text-muted small">demo expires: 01 May 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> [User Name] <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+							<li><a href="#"><i class="fa fa-dashboard"></i>&nbsp;Dashboard</a></li>
+							<li><a href="#"><i class="fa fa-sitemap"></i>&nbsp;Upgrade Navigation</a></li>
+							<li><a href="#"><i class="fa fa-list"></i>&nbsp;School License List</a></li>
+							<li><a href="#"><i class="fa fa-area-chart"></i>&nbsp;Reports</a></li>
+						</ul>
+					</div>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">SIMON Central Dashboard</h3>
+                </div>
+            </div>
+			 <div class="row">
+                <div class="col-md-12">
+					<hr/>
+					<table id="schoolsTable" class="table">
+						<thead><tr><th>School</th><th>Version</th><th>Last updated</th><th>Type</th><th>Region</th><th>Last Ping</th><th>View</th><th></th></tr></thead>
+						<tbody>
+							<tr><td>Alpha</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Beta</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Gamma</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Delta</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Eplison</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Iota</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Lamda</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Theta</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Kappa</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Omega</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Sigma</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+							<tr><td>Zeta</td><td>3.10.12.1</td><td>01 Oct 2016</td><td>Secondary</td><td>Area One</td><td>05 Oct 3:42pm</td><td><a href="#"><i class="fa fa-pencil fa-2x"></i></a></td><td></td></tr>
+						</tbody>
+					</table>
+                </div>
+            </div>
+          			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Schools by Version (latest 3.10.5)
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<div class="flot-chart">
+								<div class="flot-chart-content" id="flot-pie-chart"></div>
+							</div>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Schools by Type
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<div class="flot-chart">
+								<div class="flot-chart-content" id="flot-pie-chart2"></div>
+							</div>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Top Ten Errors last month
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<div class="flot-chart">
+								<div class="flot-chart-content" id="flot-pie-chart3"></div>
+							</div>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Flot Charts JavaScript -->
+    <script src="../vendor/flot/excanvas.min.js"></script>
+    <script src="../vendor/flot/jquery.flot.js"></script>
+    <script src="../vendor/flot/jquery.flot.pie.js"></script>
+    <script src="../vendor/flot/jquery.flot.resize.js"></script>
+    <script src="../vendor/flot/jquery.flot.time.js"></script>
+    <script src="../vendor/flot-tooltip/jquery.flot.tooltip.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+	<!-- Grid Control JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+	 <script src="../vendor/Gridstack/gridstack.js"></script>
+	 <script src="../vendor/Gridstack/gridstack.jQueryUI.js"></script>
+
+	<script>
+		function labelFormatter(label, series) {
+			return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+		}
+
+	 	$(document).ready(function () {
+	 		$('#schoolsTable').DataTable({
+	 			responsive: true
+	 		});
+
+			$(function() {
+				var data = [
+					{ label: "version 3.10.1", data: 10 },
+					{ label: "version 3.10.5", data: 45 },
+					{ label: "version 2.8.7", data: 25 },
+					{ label: "version 2.9.10",data: 20}];
+				var data2 = [
+					{ label: "Secondary", data: 48 },
+					{ label: "Primary", data: 40 },
+					{ label: "Junior", data: 9 },
+					{ label: "Other", data: 3 }];
+
+				var data3 = [
+					{ label: "logged errno1", data: 55 },
+					{ label: "logged errno66", data: 33 },
+					{ label: "logged errno3004", data: 6 },
+					{ label: "logged errno221", data: 6 },
+					{ label: "logged errno382", data: 6 },
+					{ label: "logged errno33", data: 6 },
+					{ label: "logged errno13", data: 6 },
+					{ label: "logged errno99", data: 6 },
+					{ label: "logged errno65", data: 6 },
+					{ label: "logged errno_ohno", data: 6 }];
+
+
+				var data4 = [
+					{ label: " 3.10.1", data: 1 },
+					{ label: " 3.10.5", data: 3 },
+					{ label: " 2.8.7", data: 9 },
+					{ label: " 2.9.10", data: 20 }];
+
+				$.plot($("#flot-pie-chart"), data, {
+					series: {
+						pie: { 
+							show: true,
+							radius: 1,
+							label: {
+								show: true,
+								radius: 3/4,
+								formatter: labelFormatter,
+								background: { 
+									opacity: 0.5,
+									color: '#000'
+								}
+							}
+						}
+					},
+					legend: {
+        				show: false
+					},
+					grid: {
+						hoverable: true
+					},
+					tooltip: false
+				});				
+
+				/* pie 2 */
+				$.plot($("#flot-pie-chart2"), data2, {
+					series: {
+						pie: { 
+							show: true,
+							radius: 1,
+							label: {
+								show: true,
+								radius: 3/4,
+								formatter: labelFormatter,
+								background: { 
+									opacity: 0.5,
+									color: '#000'
+								}
+							}
+						}
+					},
+					legend: {
+        				show: false
+					},
+					grid: {
+						hoverable: true
+					},
+					tooltip: false
+				});		
+				/* pie 3 */
+				$.plot($("#flot-pie-chart3"), data3, {
+					series: {
+						pie: { 
+							show: true,
+							radius: 1,
+							label: {
+								show: true,
+								radius: 3/4,
+								formatter: labelFormatter,
+								background: { 
+									opacity: 0.5,
+									color: '#000'
+								}
+							}
+						}
+					},
+					legend: {
+        				show: false
+					},
+					grid: {
+						hoverable: true
+					},
+					tooltip: false
+				});		
+			});
+	 	});
+	</script>
+</body>
+
+</html>

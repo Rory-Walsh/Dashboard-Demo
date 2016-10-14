@@ -5,7 +5,7 @@
 		"../sass/variables.scss"
 	],
 	"sourcesContent": [
-		"﻿/* Sass variables start with the $ sign, \r\n...that's about all that makes it different from LESS syntax :p */\r\n\r\n// Variables\r\n$gray-darker: lighten(#000, 13.5%);\r\n$gray-dark: lighten(#000, 20%);\r\n$gray: lighten(#000, 33.5%);\r\n$gray-light: lighten(#000, 60%);\r\n$gray-lighter: lighten(#000, 93.5%);\r\n$gray-lightest: lighten(#000, 97.25%);\r\n$brand-primary: #428bca;\r\n$brand-success: #5cb85c;\r\n$brand-info: #5bc0de;\r\n$brand-warning: #f0ad4e;\r\n$brand-danger: #d9534f;\r\n$nav-dark: darken(#428bca, 22%);\r\n$nav-light: complement($nav-dark);\r\n$nav-flip: invert($nav-dark);"
+		"﻿/* Sass variables start with the $ sign, \r\n...that's about all that makes it different from LESS syntax :p */\r\n\r\n// Variables\r\n$gray-darker: lighten(#000, 13.5%);\r\n$gray-dark: lighten(#000, 20%);\r\n$gray: lighten(#000, 33.5%);\r\n$gray-light: lighten(#000, 60%);\r\n$gray-lighter: lighten(#000, 93.5%);\r\n$gray-lightest: lighten(#000, 97.25%);\r\n$brand-primary: #428bca;\r\n$brand-success: #5cb85c;\r\n$brand-info: #5bc0de;\r\n$brand-warning: #f0ad4e;\r\n$brand-danger: #d9534f;\r\n$nav-dark: darken(#428bca, 22%);\r\n$nav-light: complement($nav-dark);\r\n$nav-flip: invert($nav-dark);\r\n\r\n$test-a: complement(#99CC66);\r\n$test-b: invert(#99CC66);"
 	],
 	"mappings": "AAAA;kEACkE",
 	"names": []

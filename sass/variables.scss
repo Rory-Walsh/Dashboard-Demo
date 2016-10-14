@@ -16,3 +16,6 @@ $brand-danger: #d9534f;
 $nav-dark: darken(#428bca, 22%);
 $nav-light: complement($nav-dark);
 $nav-flip: invert($nav-dark);
+
+$test-a: complement(#99CC66);
+$test-b: invert(#99CC66);
