@@ -1,10 +1,9 @@
 ﻿@import "variables.scss";
-
+*{    box-sizing: border-box;}
 .foo{ color: $test-a;}
 .moo{color:$test-b;}
-.choo{} 
-.manchu{}
 
+.category-list li a:hover { color:#e53732;}
 // Global Styles
 
 body {

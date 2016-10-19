@@ -1,5 +1,10 @@
 /* Sass variables start with the $ sign, 
 ...that's about all that makes it different from LESS syntax :p */
+/* line 2, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+* {
+  box-sizing: border-box;
+}
+
 /* line 3, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .foo {
   color: #9966cc;
@@ -10,17 +15,22 @@
   color: rebeccapurple;
 }
 
-/* line 10, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 6, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+.category-list li a:hover {
+  color: #e53732;
+}
+
+/* line 9, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 body {
   background-color: #f8f8f8;
 }
 
-/* line 16, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 15, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 #wrapper {
   width: 100%;
 }
 
-/* line 20, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 19, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;
@@ -28,7 +38,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* line 27, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 26, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   #page-wrapper {
     position: inherit;
     margin: 0 0 0 250px;
@@ -37,49 +47,49 @@ body {
   }
 }
 
-/* line 39, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 38, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links {
   margin-right: 0;
 }
 
-/* line 43, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 42, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links li {
   display: inline-block;
 }
 
-/* line 47, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 46, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links li:last-child {
   margin-right: 15px;
 }
 
-/* line 51, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 50, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links li a {
   padding: 15px;
   min-height: 50px;
 }
 
-/* line 56, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 55, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-menu li {
   display: block;
 }
 
-/* line 60, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 59, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-menu li:last-child {
   margin-right: 0;
 }
 
-/* line 64, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 63, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-menu li a {
   padding: 3px 20px;
   min-height: 0;
 }
 
-/* line 69, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 68, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-menu li a div {
   white-space: normal;
 }
 
-/* line 73, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 72, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
 .navbar-top-links .dropdown-alerts {
@@ -87,88 +97,88 @@ body {
   min-width: 0;
 }
 
-/* line 80, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 79, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-messages {
   margin-left: 5px;
 }
 
-/* line 84, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 83, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-tasks {
   margin-left: -59px;
 }
 
-/* line 88, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 87, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-alerts {
   margin-left: -123px;
 }
 
-/* line 92, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 91, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-user {
   right: 0;
   left: auto;
 }
 
-/* line 100, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 99, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .sidebar-nav.navbar-collapse {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 106, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 105, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .sidebar-search {
   padding: 15px;
 }
 
-/* line 110, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 109, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar ul li {
   border-bottom: 1px solid #e7e7e7;
 }
 
-/* line 113, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 112, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar ul li a.active {
   background-color: #eeeeee;
 }
 
-/* line 119, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 118, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .arrow {
   float: right;
 }
 
-/* line 123, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 122, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .fa.arrow:before {
   content: "\f104";
 }
 
-/* line 127, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 126, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .active > a > .fa.arrow:before {
   content: "\f107";
 }
 
-/* line 131, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 130, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .nav-second-level li,
 .sidebar .nav-third-level li {
   border-bottom: none !important;
 }
 
-/* line 136, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 135, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .nav-second-level li a {
   padding-left: 37px;
 }
 
-/* line 140, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 139, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .sidebar .nav-third-level li a {
   padding-left: 52px;
 }
 
 @media (min-width: 768px) {
-  /* line 145, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 144, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   .sidebar {
     z-index: 1;
     position: absolute;
     width: 250px;
     margin-top: 51px;
   }
-  /* line 152, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 151, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   .navbar-top-links .dropdown-messages,
   .navbar-top-links .dropdown-tasks,
   .navbar-top-links .dropdown-alerts {
@@ -176,39 +186,39 @@ body {
   }
 }
 
-/* line 161, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 160, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-outline {
   color: inherit;
   background-color: transparent;
   transition: all .5s;
 }
 
-/* line 167, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 166, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-primary.btn-outline {
   color: #428bca;
 }
 
-/* line 171, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 170, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-success.btn-outline {
   color: #5cb85c;
 }
 
-/* line 175, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 174, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-info.btn-outline {
   color: #5bc0de;
 }
 
-/* line 179, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 178, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-warning.btn-outline {
   color: #f0ad4e;
 }
 
-/* line 183, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 182, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-danger.btn-outline {
   color: #d9534f;
 }
 
-/* line 187, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 186, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-primary.btn-outline:hover,
 .btn-success.btn-outline:hover,
 .btn-info.btn-outline:hover,
@@ -217,65 +227,65 @@ body {
   color: white;
 }
 
-/* line 197, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 196, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .chat {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 203, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 202, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .chat li {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px dotted #999999;
 }
 
-/* line 209, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 208, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .chat li.left .chat-body {
   margin-left: 60px;
 }
 
-/* line 213, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 212, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .chat li.right .chat-body {
   margin-right: 60px;
 }
 
-/* line 217, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 216, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .chat li .chat-body p {
   margin: 0;
 }
 
-/* line 221, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 220, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel .slidedown .glyphicon,
 .chat .glyphicon {
   margin-right: 5px;
 }
 
-/* line 226, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 225, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .chat-panel .panel-body {
   height: 350px;
   overflow-y: scroll;
 }
 
-/* line 233, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 232, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .login-panel {
   margin-top: 25%;
 }
 
-/* line 239, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 238, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .flot-chart {
   display: block;
   height: 400px;
 }
 
-/* line 244, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 243, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .flot-chart-content {
   width: 100%;
   height: 100%;
 }
 
-/* line 251, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 250, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
@@ -284,21 +294,21 @@ table.dataTable thead .sorting_desc_disabled {
   background: transparent;
 }
 
-/* line 259, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 258, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 table.dataTable thead .sorting_asc:after {
   content: "\f0de";
   float: right;
   font-family: fontawesome;
 }
 
-/* line 265, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 264, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 table.dataTable thead .sorting_desc:after {
   content: "\f0dd";
   float: right;
   font-family: fontawesome;
 }
 
-/* line 271, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 270, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 table.dataTable thead .sorting:after {
   content: "\f0dc";
   float: right;
@@ -306,7 +316,7 @@ table.dataTable thead .sorting:after {
   color: rgba(50, 50, 50, 0.5);
 }
 
-/* line 280, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 279, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-circle {
   width: 30px;
   height: 30px;
@@ -317,7 +327,7 @@ table.dataTable thead .sorting:after {
   line-height: 1.428571429;
 }
 
-/* line 290, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 289, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-circle.btn-lg {
   width: 50px;
   height: 50px;
@@ -327,7 +337,7 @@ table.dataTable thead .sorting:after {
   line-height: 1.33;
 }
 
-/* line 299, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 298, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .btn-circle.btn-xl {
   width: 70px;
   height: 70px;
@@ -337,7 +347,7 @@ table.dataTable thead .sorting:after {
   line-height: 1.33;
 }
 
-/* line 310, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 309, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .show-grid [class^="col-"] {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -345,90 +355,90 @@ table.dataTable thead .sorting:after {
   background-color: #eee !important;
 }
 
-/* line 317, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 316, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .show-grid {
   margin: 15px 0;
 }
 
-/* line 323, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 322, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .huge {
   font-size: 40px;
 }
 
-/* line 327, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 326, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-green {
   border-color: #5cb85c;
 }
 
-/* line 329, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 328, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-green > .panel-heading {
   border-color: #5cb85c;
   color: white;
   background-color: #5cb85c;
 }
 
-/* line 334, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 333, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-green > a {
   color: #5cb85c;
 }
 
-/* line 336, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 335, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-green > a:hover {
   color: #3d8b3d;
 }
 
-/* line 342, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 341, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-red {
   border-color: #d9534f;
 }
 
-/* line 344, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 343, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-red > .panel-heading {
   border-color: #d9534f;
   color: white;
   background-color: #d9534f;
 }
 
-/* line 349, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 348, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-red > a {
   color: #d9534f;
 }
 
-/* line 351, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 350, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-red > a:hover {
   color: #b52b27;
 }
 
-/* line 357, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 356, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-yellow {
   border-color: #f0ad4e;
 }
 
-/* line 359, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 358, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-yellow > .panel-heading {
   border-color: #f0ad4e;
   color: white;
   background-color: #f0ad4e;
 }
 
-/* line 364, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 363, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-yellow > a {
   color: #f0ad4e;
 }
 
-/* line 366, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 365, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .panel-yellow > a:hover {
   color: #df8a13;
 }
 
-/* line 373, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 372, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline {
   position: relative;
   padding: 20px 0 20px;
   list-style: none;
 }
 
-/* line 379, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 378, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline:before {
   content: " ";
   position: absolute;
@@ -440,37 +450,37 @@ table.dataTable thead .sorting:after {
   background-color: #eeeeee;
 }
 
-/* line 390, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 389, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li {
   position: relative;
   margin-bottom: 20px;
 }
 
-/* line 395, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 394, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
   display: table;
 }
 
-/* line 401, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 400, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li:after {
   clear: both;
 }
 
-/* line 405, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 404, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
   display: table;
 }
 
-/* line 411, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 410, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li:after {
   clear: both;
 }
 
-/* line 415, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 414, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li > .timeline-panel {
   float: left;
   position: relative;
@@ -482,7 +492,7 @@ table.dataTable thead .sorting:after {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 
-/* line 426, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 425, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li > .timeline-panel:before {
   content: " ";
   display: inline-block;
@@ -495,7 +505,7 @@ table.dataTable thead .sorting:after {
   border-left: 15px solid #ccc;
 }
 
-/* line 438, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 437, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li > .timeline-panel:after {
   content: " ";
   display: inline-block;
@@ -508,7 +518,7 @@ table.dataTable thead .sorting:after {
   border-left: 14px solid #fff;
 }
 
-/* line 450, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 449, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li > .timeline-badge {
   z-index: 100;
   position: absolute;
@@ -525,12 +535,12 @@ table.dataTable thead .sorting:after {
   background-color: #999999;
 }
 
-/* line 466, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 465, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
 }
 
-/* line 470, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 469, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li.timeline-inverted > .timeline-panel:before {
   right: auto;
   left: -15px;
@@ -538,7 +548,7 @@ table.dataTable thead .sorting:after {
   border-left-width: 0;
 }
 
-/* line 477, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 476, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline > li.timeline-inverted > .timeline-panel:after {
   right: auto;
   left: -14px;
@@ -546,77 +556,77 @@ table.dataTable thead .sorting:after {
   border-left-width: 0;
 }
 
-/* line 484, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 483, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-badge.primary {
   background-color: #2e6da4 !important;
 }
 
-/* line 488, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 487, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-badge.success {
   background-color: #3f903f !important;
 }
 
-/* line 492, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 491, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-badge.warning {
   background-color: #f0ad4e !important;
 }
 
-/* line 496, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 495, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-badge.danger {
   background-color: #d9534f !important;
 }
 
-/* line 500, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 499, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-badge.info {
   background-color: #5bc0de !important;
 }
 
-/* line 504, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 503, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-title {
   margin-top: 0;
   color: inherit;
 }
 
-/* line 509, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 508, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-body > p,
 .timeline-body > ul {
   margin-bottom: 0;
 }
 
-/* line 514, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 513, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .timeline-body > p + p {
   margin-top: 5px;
 }
 
 @media (max-width: 767px) {
-  /* line 519, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 518, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   ul.timeline:before {
     left: 40px;
   }
-  /* line 523, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 522, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   ul.timeline > li > .timeline-panel {
     width: calc(100% - 90px);
     width: -moz-calc(100% - 90px);
     width: -webkit-calc(100% - 90px);
   }
-  /* line 529, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 528, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   ul.timeline > li > .timeline-badge {
     top: 16px;
     left: 15px;
     margin-left: 0;
   }
-  /* line 535, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 534, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   ul.timeline > li > .timeline-panel {
     float: right;
   }
-  /* line 539, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 538, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   ul.timeline > li > .timeline-panel:before {
     right: auto;
     left: -15px;
     border-right-width: 15px;
     border-left-width: 0;
   }
-  /* line 546, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+  /* line 545, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
   ul.timeline > li > .timeline-panel:after {
     right: auto;
     left: -14px;
@@ -626,44 +636,44 @@ table.dataTable thead .sorting:after {
 }
 
 /* Wireframe DEMO Classes */
-/* line 555, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 554, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-inverse {
   background-color: #22517a;
   color: #7a4b22;
 }
 
-/* line 556, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 555, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-inverse p {
   color: #ddae85;
 }
 
-/* line 557, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 556, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links li a {
   color: #fff;
 }
 
-/* line 558, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 557, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links li a:hover, .navbar-top-links li a:active, .navbar-top-links li a:focus {
   background-color: #3572b0;
 }
 
-/* line 559, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 558, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .navbar-top-links .dropdown-menu li a {
   color: #333;
 }
 
-/* line 560, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 559, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
   background-color: #3572b0;
 }
 
-/* line 561, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 560, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .myalert {
   padding: 10px 10px 10px 36px;
   position: relative;
 }
 
-/* line 562, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 561, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .myalert-icon {
   display: block;
   left: 10px;
@@ -674,22 +684,22 @@ table.dataTable thead .sorting:after {
   font-size: 16px;
 }
 
-/* line 563, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 562, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .alert-dismissible .close {
   right: 0px;
 }
 
-/* line 564, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 563, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 #page-wrapper {
   padding-bottom: 10px;
 }
 
-/* line 565, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 564, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .alert-dismissable .close, .alert-dismissible .close {
   position: unset;
 }
 
-/* line 566, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 565, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
@@ -704,58 +714,58 @@ table.dataTable thead .sorting:after {
   padding: 20px;
 }
 
-/* line 579, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 578, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout h4 {
   margin-bottom: 5px;
   margin-top: 0;
 }
 
-/* line 580, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 579, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout p:last-child {
   margin-bottom: 0;
 }
 
-/* line 582, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 581, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout-warning {
   border-left-color: #aa6708;
 }
 
-/* line 583, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 582, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout-warning h4 {
   color: #aa6708;
 }
 
-/* line 584, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 583, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout-danger {
   border-left-color: #ce4844;
 }
 
-/* line 585, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 584, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout-danger h4 {
   color: #ce4844;
 }
 
-/* line 586, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 585, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout-info {
   border-left-color: #1b809e;
 }
 
-/* line 587, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 586, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .callout-info h4 {
   color: #1b809e;
 }
 
-/* line 588, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 587, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .large {
   font-size: 21px;
 }
 
-/* line 589, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 588, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .schoolItems {
   color: forestgreen;
 }
 
-/* line 590, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
+/* line 589, C:/inetpub/wwwroot/Dashboard Demo/sass/main.scss */
 .schoolItems:hover {
   color: red;
 }
