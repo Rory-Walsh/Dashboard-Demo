@@ -1,9 +1,50 @@
 ﻿@import "variables.scss";
+
+/* Mock Up styles*/
 *{    box-sizing: border-box;}
 .foo{ color: $test-a;}
 .moo{color:$test-b;}
+.category-list li ul li ul li a:hover { color:#e53732;}
 
-.category-list li a:hover { color:#e53732;}
+.list-group-listItem{ padding:0; border:0;}
+.panel-body {
+    padding: 15px;
+}
+.pHeading{
+	background: #EEE;
+	border: 1px solid #CCC;
+    padding: 4px;
+    line-height: 1.7em;
+    word-wrap: break-word;
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+}
+
+.modal-body{ font-size:14px;}
+.clearfix{ clear:both;}
+#workdesk p { text-align:left;}
+.heading{ font-size:23px;}
+.list-group-alt{ background-color:$gray-lightest;}
+
+.pppBox{
+    position: relative;
+	float:right;
+    top: -20px;
+    right: -20px;
+    display: block;
+    padding: 5px 8px;
+    font-size: 12px;
+    color: #767676;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    border-radius: 0 4px 0 4px;
+	border-top-right-radius: 0;
+}
+
+input[type=checkbox], input[type=radio]{ margin:4px 0 0;}
+
+
+blockquote{ margin-top:0; margin-bottom:0px; font-size:15px;}
 // Global Styles
 
 body {
@@ -584,6 +625,8 @@ table.dataTable thead .sorting:after {
 .callout-danger h4 {color:#ce4844;}
 .callout-info { border-left-color: #1b809e;}
 .callout-info h4 { color: #1b809e;}
+.callout-success { border-left-color: $brand-success}
+.callout-success h4 { color: $brand-success}
 .large {font-size:21px;}
 .schoolItems {color: forestgreen;}
 .schoolItems:hover { color:red;} 
