@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Quick Tests</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(
+			console.log('ready'),
+			stuffs()
+		);
+
+		function stuffs() {
+
+		};
+	</script>
+</head>
+<body>
+	<div class="container">
+		<fieldset>
+			<legend>Form Test</legend>
+			<div class="form-group">
+				<label>Txt</label>
+				<input id="txt" type="text" placeholder="focus test" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>List</label>
+				<select id="lst" class="form-control"><option>Blank</option><option>Opt 1</option><option>Opt 2</option><option>Opt 3</option></select>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-default" onclick="$('#txt').focus();">Focus Field</button>
+					<button class="btn btn-default" onclick="$('#lst').focus();">Focus Select</button>
+			</div>						
+		</fieldset>
+
+		<div id="StudentAttendees" class="RadComboBox RadComboBox_Bootstrap" style="width:400px;">
+			<span class="rcbInner">
+				<input name="StudentAttendees" class="rcbInput radPreventDecorate rcbEmptyMessage" id="StudentAttendees_Input" value="Select a Student" autocomplete="off" type="text">
+				<button class="rcbActionButton" tabindex="-1" type="button">
+					<span id="StudentAttendees_Arrow" class="t-font-icon t-i-arrow-down"></span>
+					<span class="rcbButtonText">select</span>
+				</button>
+			</span>
+
+			<div class="rcbSlide" style="z-index: 6000; display: none; height: 300px;">
+				<div id="StudentAttendees_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Bootstrap " style="height: 300px;">
+					<div class="rcbScroll rcbWidth">
+						<ul class="rcbList">
+							<li class="rcbItem">Abraham, Eddie (Yr: 8, Hrm: 8A, Hse: GO)</li>
+							<li class="rcbItem">Abraham, Hank (Yr: 10, Hrm: 10C, Hse: GR)</li>
+							<li class="rcbItem">Adams, Rebecca (Yr: 9, Hrm: 9E, Hse: MA)</li>
+							<li class="rcbItem">Adams, Sarah (Yr: 11, Hrm: 11G, Hse: MA)</li>
+							<li class="rcbItem">Ajang, Dante (Yr: 10, Hrm: 10A, Hse: GO)</li>
+							<li class="rcbItem">Ajang, Niamh (Yr: 7, Hrm: 7F, Hse: GO)</li>
+							<li class="rcbItem">Ajang, Sarah (Yr: 11, Hrm: 11A, Hse: MA)</li>
+							<li class="rcbItem">Wright, Joseph (Yr: 8, Hrm: 8I, Hse: GR)</li>
+							<li class="rcbItem">Wright, Kaleb (Yr: 7, Hrm: 7D, Hse: GO)</li>
+							<li class="rcbItem">Wright, Tessa (Yr: 7, Hrm: 7C, Hse: BL)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<input id="StudentAttendees_ClientState" name="StudentAttendees_ClientState" autocomplete="off" type="hidden">
+		</div>
+	</div>
+</body>
+</html>

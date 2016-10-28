@@ -56,32 +56,32 @@
 53 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
 54 verbose request uri https://registry.npmjs.org/browser-sync
 55 verbose request no auth needed
-56 info attempt registry request try #1 at 8:46:49 AM
-57 verbose request id 0b67be3f6e82d54a
+56 info attempt registry request try #1 at 9:32:59 AM
+57 verbose request id 573364fb0cdd8b5a
 58 http request GET https://registry.npmjs.org/browser-sync
 59 verbose request uri https://registry.npmjs.org/gulp
 60 verbose request no auth needed
-61 info attempt registry request try #1 at 8:46:49 AM
+61 info attempt registry request try #1 at 9:32:59 AM
 62 http request GET https://registry.npmjs.org/gulp
 63 verbose request uri https://registry.npmjs.org/gulp-clean-css
 64 verbose request no auth needed
-65 info attempt registry request try #1 at 8:46:49 AM
+65 info attempt registry request try #1 at 9:32:59 AM
 66 http request GET https://registry.npmjs.org/gulp-clean-css
 67 verbose request uri https://registry.npmjs.org/gulp-header
 68 verbose request no auth needed
-69 info attempt registry request try #1 at 8:46:49 AM
+69 info attempt registry request try #1 at 9:32:59 AM
 70 http request GET https://registry.npmjs.org/gulp-header
 71 verbose request uri https://registry.npmjs.org/gulp-less
 72 verbose request no auth needed
-73 info attempt registry request try #1 at 8:46:49 AM
+73 info attempt registry request try #1 at 9:32:59 AM
 74 http request GET https://registry.npmjs.org/gulp-less
 75 verbose request uri https://registry.npmjs.org/gulp-rename
 76 verbose request no auth needed
-77 info attempt registry request try #1 at 8:46:49 AM
+77 info attempt registry request try #1 at 9:32:59 AM
 78 http request GET https://registry.npmjs.org/gulp-rename
 79 verbose request uri https://registry.npmjs.org/gulp-uglify
 80 verbose request no auth needed
-81 info attempt registry request try #1 at 8:46:49 AM
+81 info attempt registry request try #1 at 9:32:59 AM
 82 http request GET https://registry.npmjs.org/gulp-uglify
 83 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 84 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
@@ -90,20 +90,20 @@
 87 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 88 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 89 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
-90 info attempt registry request try #2 at 8:47:00 AM
+90 info attempt registry request try #2 at 9:33:10 AM
 91 http request GET https://registry.npmjs.org/gulp-less
-92 info attempt registry request try #2 at 8:47:00 AM
-93 http request GET https://registry.npmjs.org/gulp-uglify
-94 info attempt registry request try #2 at 8:47:00 AM
+92 info attempt registry request try #2 at 9:33:10 AM
+93 http request GET https://registry.npmjs.org/gulp
+94 info attempt registry request try #2 at 9:33:10 AM
 95 http request GET https://registry.npmjs.org/gulp-clean-css
-96 info attempt registry request try #2 at 8:47:00 AM
-97 http request GET https://registry.npmjs.org/gulp
-98 info attempt registry request try #2 at 8:47:00 AM
-99 http request GET https://registry.npmjs.org/gulp-rename
-100 info attempt registry request try #2 at 8:47:00 AM
-101 http request GET https://registry.npmjs.org/gulp-header
-102 info attempt registry request try #2 at 8:47:00 AM
-103 http request GET https://registry.npmjs.org/browser-sync
+96 info attempt registry request try #2 at 9:33:10 AM
+97 http request GET https://registry.npmjs.org/gulp-uglify
+98 info attempt registry request try #2 at 9:33:10 AM
+99 http request GET https://registry.npmjs.org/gulp-header
+100 info attempt registry request try #2 at 9:33:10 AM
+101 http request GET https://registry.npmjs.org/browser-sync
+102 info attempt registry request try #2 at 9:33:10 AM
+103 http request GET https://registry.npmjs.org/gulp-rename
 104 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 105 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 106 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
@@ -111,25 +111,25 @@
 108 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 109 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
 110 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 151.101.80.162:443
-111 info attempt registry request try #3 at 8:48:02 AM
-112 http request GET https://registry.npmjs.org/browser-sync
-113 info attempt registry request try #3 at 8:48:02 AM
+111 info attempt registry request try #3 at 9:34:12 AM
+112 http request GET https://registry.npmjs.org/gulp-clean-css
+113 info attempt registry request try #3 at 9:34:12 AM
 114 http request GET https://registry.npmjs.org/gulp-uglify
-115 info attempt registry request try #3 at 8:48:02 AM
-116 http request GET https://registry.npmjs.org/gulp-header
-117 info attempt registry request try #3 at 8:48:02 AM
+115 info attempt registry request try #3 at 9:34:12 AM
+116 http request GET https://registry.npmjs.org/gulp-rename
+117 info attempt registry request try #3 at 9:34:12 AM
 118 http request GET https://registry.npmjs.org/gulp
-119 info attempt registry request try #3 at 8:48:02 AM
-120 http request GET https://registry.npmjs.org/gulp-clean-css
-121 info attempt registry request try #3 at 8:48:02 AM
-122 http request GET https://registry.npmjs.org/gulp-less
-123 info attempt registry request try #3 at 8:48:02 AM
-124 http request GET https://registry.npmjs.org/gulp-rename
+119 info attempt registry request try #3 at 9:34:12 AM
+120 http request GET https://registry.npmjs.org/gulp-header
+121 info attempt registry request try #3 at 9:34:12 AM
+122 http request GET https://registry.npmjs.org/browser-sync
+123 info attempt registry request try #3 at 9:34:12 AM
+124 http request GET https://registry.npmjs.org/gulp-less
 125 silly fetchPackageMetaData Error: connect ECONNREFUSED 151.101.80.162:443
 125 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
 125 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
 125 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
-125 silly fetchPackageMetaData  error for gulp-less@^3.1.0 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+125 silly fetchPackageMetaData  error for browser-sync@^2.13.0 { [Error: connect ECONNREFUSED 151.101.80.162:443]
 125 silly fetchPackageMetaData   code: 'ECONNREFUSED',
 125 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
 125 silly fetchPackageMetaData   syscall: 'connect',
@@ -139,7 +139,7 @@
 126 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
 126 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
 126 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
-126 silly fetchPackageMetaData  error for browser-sync@^2.13.0 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+126 silly fetchPackageMetaData  error for gulp-uglify@^1.5.4 { [Error: connect ECONNREFUSED 151.101.80.162:443]
 126 silly fetchPackageMetaData   code: 'ECONNREFUSED',
 126 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
 126 silly fetchPackageMetaData   syscall: 'connect',
@@ -159,7 +159,7 @@
 128 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
 128 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
 128 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
-128 silly fetchPackageMetaData  error for gulp-header@^1.8.7 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+128 silly fetchPackageMetaData  error for gulp@^3.9.1 { [Error: connect ECONNREFUSED 151.101.80.162:443]
 128 silly fetchPackageMetaData   code: 'ECONNREFUSED',
 128 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
 128 silly fetchPackageMetaData   syscall: 'connect',
@@ -169,7 +169,7 @@
 129 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
 129 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
 129 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
-129 silly fetchPackageMetaData  error for gulp@^3.9.1 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+129 silly fetchPackageMetaData  error for gulp-header@^1.8.7 { [Error: connect ECONNREFUSED 151.101.80.162:443]
 129 silly fetchPackageMetaData   code: 'ECONNREFUSED',
 129 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
 129 silly fetchPackageMetaData   syscall: 'connect',
@@ -179,7 +179,7 @@
 130 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:856:11)
 130 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:879:20)
 130 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
-130 silly fetchPackageMetaData  error for gulp-uglify@^1.5.4 { [Error: connect ECONNREFUSED 151.101.80.162:443]
+130 silly fetchPackageMetaData  error for gulp-less@^3.1.0 { [Error: connect ECONNREFUSED 151.101.80.162:443]
 130 silly fetchPackageMetaData   code: 'ECONNREFUSED',
 130 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
 130 silly fetchPackageMetaData   syscall: 'connect',
