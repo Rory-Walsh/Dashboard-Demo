@@ -1,6 +1,4 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head id="Head1">
 	<title>
@@ -14,7 +12,6 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
 	<link href="bundles/CssStyles" rel="stylesheet" />
-
 
 	<link href="/lib/css/bootstrap.min.css?636104762635909343" rel="stylesheet" />
 	<link href="/lib/css/bootstrap-theme.min.css?636104762635719185" rel="stylesheet" />
@@ -118,13 +115,17 @@
 
 		#workdesk{			height: 100% !important;}
 	</style>
+
+
 	<link href="http://127.0.0.1/css/main.css" rel="stylesheet" />
+	<link href="http://localhost:85/WebModules/DocumentManagementSystem/DocumentManagementSystem.css?636131577617862012" rel="stylesheet" type="text/css" />
+
 	<!-- Grid Rezising CSS -->
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.2.6/gridstack.min.css" />
 	<!-- DataTables CSS -->
-	<link href="http://127.0.0.1/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="http://127.0.0.1/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet" />
 	<!-- DataTables Responsive CSS -->
-	<link href="http://127.0.0.1/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+	<link href="http://127.0.0.1/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
 
 	<!-- Javacript: -->
 	<script src="/lib/js/jquery-2.1.1.min.js?636022739540949158" type="text/javascript"></script>
@@ -138,13 +139,12 @@
 	<script src="http://127.0.0.1/vendor/datatables-responsive/dataTables.responsive.js"></script>
 
 </head>
-<body data-spy="scroll" data-target="#sideBar">
+<body>
 	<!-- modals -->
 	<div id="sectionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog  modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					   
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<div class="pull-right" style="position:relative; margin-right:20px; ">Page 1 of 20</div>
 					<h4 class="modal-title" id="myModalLabel">2017 VRQA</h4>
@@ -182,26 +182,47 @@
 									</label>
 								</div>
 							</div>
-							<div id="evidenceQ1" class="panel-body panel-collapse collapse">
+							<div id="evidenceQ1" class="panel-collapse collapse">
 								<p>Supporting evidence required <small><em>(please choose only one)</em></small></p>
-								<div class="form-inline">
-									<div class="form-group"><label>1) URL:</label> 
-									<input type="text" placeholder="http://" class="form-control" style="width:234px" />&nbsp;&nbsp;
-									<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Accessible URL to a web page or file.">
-										<i class="fa fa-info"></i>
-									</button>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-inline">
+											<div class="form-group">
+												<label>1) URL:</label>
+												<input type="text" placeholder="http://" class="form-control" style="width:234px" />&nbsp;&nbsp;
+												<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Accessible URL to a web page or file note: Record version number of file if stored in a cloud based system.">
+													<i class="fa fa-info"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-inline">
+											<div class="form-group"><label>2) Upload file:</label> <input type="file" class="form-control" />
+											&nbsp;&nbsp;<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Will this be a local document to upload? How about a SIMON document? Or even a document in another system? Will this be 'uploaded' into an archive in SIMON linked with this notification? Is there any reason this should be stored at e-SORT perhaps?"><i class="fa fa-info"></i></button>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="form-inline">
-									<div class="form-group"><label>2 Upload file:</label> <input type="file" class="form-control" />
-									&nbsp;&nbsp;<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Will this be a local document to upload? How about a SIMON document? Or even a document in another system? Will this be 'uploaded' into an archive in SIMON linked with this notification? Is there any reason this should be stored at e-SORT perhaps?"><i class="fa fa-info"></i></button>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>3) Choose Simon document:</label>&nbsp;<button id="btnLink" class="btn btn-default"><i class="fa fa-search"></i> Browse</button>
+											&nbsp;&nbsp;<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Choose an existing document from the Simon DMS."><i class="fa fa-info"></i></button>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-inline">
+											<div class="form-group">
+												<label>4) Choose Previous:</label><select class="form-control"><option>-- select --</option><option>staffhandbook.pdf</option></select>
+												&nbsp;&nbsp;<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Choose from a file already attached to another question within this notification."><i class="fa fa-info"></i></button>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="form-inline">
-									<div class="form-group"><label>3 Choose Previous:</label><select class="form-control"><option>-- select --</option><option>staffhandbook.pdf</option></select>
-									&nbsp;&nbsp;<button type="button" class="btn btn-default btn-circle" data-container="body" data-toggle="popover" data-placement="right" data-content="Choose from a file already attached to another question within this notification."><i class="fa fa-info"></i></button>
-									</div>
-								</div>
+								
+
+								
 								<div class="form-group">
 									<label>Comment: <small>(optional)e.g. - directions to locate the relevant evidence within a document, or why a 'no' answer.</small> </label>
 									<textarea rows="2" class="form-control"></textarea>
@@ -386,7 +407,7 @@
 		</div>
 		<!-- /.modal-content -->
 	</div>
-	<div id="modal-docs-import" class="modal fade">
+	<div id="modal-e-SortCategoryDocs" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -410,28 +431,12 @@
 							</p>
 							<p>Last updated: 29 Mar 2016</p><p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 							<span>Resource: </span><code>name-of-file.doc</code> <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="View this resource by downloading the file and viewing it on your current device."><i class="fa fa-download"></i>  Download/View</button>
-							&nbsp;<button class="btn btn-default" data-toggle="collapse" data-target="#importOptions" title="Import and link this resource into your own SIMON document management system."><i class="fa fa-clone"></i>  Import to SIMON</button>
-							<div class="row">
-								<div class="col-md-12">
-									<div id="importOptions" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-										<p class="alert alert-info">By choosing to continue, this file will be downloaded from e-SORT by the SIMON system (not this browser) and stored in the SIMON document management system. Once the transfer is complete the resource will be automatically available in your local SIMON e-SORT category list, under this selected category. </p>
-										<p><b class="fa fa-info"></b>&nbsp;Currently you have the following documents listed under this local e-SORT category: </p>
-										<p><em>No Items</em></p>
-										<p><strong>Import Options:</strong> Would you like to also add knowledge banks and other SIMON meta tags to the<br />file that will be imported?</p>
-										<div class="well">
-											<cite>SIMON Meta tags options would be here</cite>
-										</div>
-										<button class="btn btn-danger pull-right">... Continue Import</button>
-									</div>
-								</div>
-							</div>
-
+							&nbsp;<button class="btn btn-default" onclick="toggleModalsForDemo();" title="Import and link this resource into your own SIMON document management system."><i class="fa fa-clone"></i>  Import to SIMON</button>
 						</li>
 					</ul>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button id="btnStep1" type="button" class="btn btn-primary" onclick="javascript: nextStep();">Next</button>
 				</div>
 			</div>
 		</div>
@@ -503,16 +508,208 @@
 						</div>
 
 					</div>
-
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button id="btnStep1" type="button" class="btn btn-primary" onclick="javascript: nextStep();">Next</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div id="modal-importWizard" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<span class="pull-right">Step 1 of 2&nbsp;&nbsp;&nbsp;</span>
+					<h4>Import current e-Sort resource:<br/>Australian Charter for Professional Learning</h4>
+				</div>
+				<div class="modal-body">
+					<div class="alert alert-info"><i class="fa fa-info-circle fa-lg fa-fw"></i>By choosing to continue, this file will be downloaded from e-SORT by the SIMON system (not this browser) and stored in the SIMON document management system. Once the transfer is complete the resource will be automatically available in your local SIMON e-SORT category list, under this selected category. </div>
+					<div class="alert alert-info">
+					<i class="fa fa-info-circle fa-lg fa-fw"></i>Currently you have the following documents listed under this local e-SORT category:<br/><em>No Items</em></div>
+				<strong>Options here for DMS import:</strong>(over two steps)
+				
+					<ul>
+						<li>Change default user permissions <code>from</code> e-Sort group <code>to</code> all/etc</li>
+						<li>Also set readOnly vs edit permissions</li>
+						<li>Add Simon Meta categories and keywords/description</li>
+						<li>Add e-Sort Description</li>
+						<li>Set a review date &amp; user</li>
+					</ul>
+					<div class="form-group pull-right">
+							<button class="btn btn-danger">... Continue Import</button></div>
+				</div>
+				<div class="modal-footer clearfix">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="modal-riskItem-edit" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Risk Register Item</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label><strong>Title: </strong></label>
+						<input type="text" class="form-control" placeholder="Name of Risk Item" maxlength="100" />
+					</div>
+					<div class="form-group">
+						<label><strong>Owner: </strong></label>
+						<select class="form-control">
+							<option>-- Select - -</option>
+							<option>John Smith</option>
+							<option>Jane Doe</option>
+							<option>Mary Anatarupra</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label><strong>Next Review: </strong></label>
+						<input type="text" class="form-control" placeholder="dd MMM yyyy" maxlength="100" />
+					</div>
+					<div class="form-group">
+						<label><strong>Rating Level: </strong></label>
+						<i class="fa fa-star-o"></i> 
+						<select class="form-control">
+							<option>Level One</option>
+							<option>Level Two</option>
+							<option>Level Three</option>
+							<option>Level Four</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label><strong>Risk Plan: </strong></label>
+						<label class="radio-inline">
+							<input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1">Yes
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"  checked>No
+						</label>
+					</div>
+					<div class="form-group">
+						<label><strong>[Custom 1]: </strong></label>
+						<input type="text" class="form-control" placeholder="Customer One Description" maxlength="100" />
+					</div>
+					<div class="form-group">
+						<label><strong>[Custom 2]: </strong></label>
+						<input type="text" class="form-control" placeholder="Customer Two Description" maxlength="100" />
+					</div>
+					<div class="form-group">
+						<label><strong>[Custom 3]: </strong></label>
+						<input type="text" class="form-control" placeholder="Customer Three Description" maxlength="100" />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button id="btnStep1" type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<div id="modal-eSortDoc-info" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">e-Sort Policy, Procedure or Practice</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#details" data-toggle="tab">Details</a>
+						</li>
+						<li>
+							<a href="#notifications" data-toggle="tab">Notifications/Alerts</a>
+						</li>
+						<li>
+							<a href="#categories" data-toggle="tab">Category Listings</a>
+						</li>
+						<li>
+							<a href="#archiveHistory" data-toggle="tab">Archive History</a>
+						</li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="details">
+							<div class="panel panel-default">
+								<div class="panel-heading clearfix">
+									<div class="pull-right"></div>
+									<h4 class="panel-title">Compliance with the Working with Children Act 2005</h4>
+								</div>
+								<div class="panel-body">
+									<div class="form-group">
+										<label>e-Sort Description:</label>
+										<p class="help-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lectus ante. Nullam eget dignissim est. Fusce at dapibus ante, efficitur accumsan nisl. Fusce eu sagittis nibh. Sed enim mauris, congue egestas enim ac, vehicula varius sem. Nam faucibus placerat tellus, pulvinar sollicitudin mi facilisis non. Ut et pellentesque nulla.</p>
+									</div>
+									<span>Last updated:</span>
+									<p class="help-block">20 Jun 2016</p>
+									<span>Resource: </span><code>name-of-file.doc</code> <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="View this resource by downloading the file and viewing it on your current device."><i class="fa fa-download"></i>  Download/View</button>
+									&nbsp;<button class="btn btn-default" onclick="toggleModalsForDemo();" title="Import and link this resource into your own SIMON document management system."><i class="fa fa-clone"></i>  Import to SIMON</button>
+									<br/>
+									<span>Related Links:</span>
+									<p class="help-block">http://sample.com</p>
+									<span>Contact:</span>
+									<p class="help-block">email@emailaddress.edu.au</p>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="notifications">
+							<div class="panel panel-default">
+								<div class="panel-heading clearfix">
+									<div class="pull-right"></div>
+									<h4 class="panel-title">Related Notification Alert History</h4>
+								</div>
+								<table class="table table-striped">
+									<thead><tr><th>Alert</th><th>Section name</th><th>Sent</th><th></th></tr></thead>
+									<tbody>
+										<tr><td>VRQA 2016</td><td>Governance Structure</td><td>04 Jun 2016</td><td><button class="btn btn-default btn-sm">View</button></td></tr>
+										<tr><td>VRQA 2017</td><td>Governance Structure</td><td>13 May 2017</td><td><button class="btn btn-default btn-sm">View</button></td></tr>
+										<tr><td>Lorem Ipsum</td><td>Vivamus sit amet felis</td><td>22 Nov 2016</td><td><button class="btn btn-default btn-sm">View</button></td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="categories">
 
+							<div class="panel panel-default">
+								<div class="panel-heading clearfix">
+									<h4 class="panel-title">Showing all current listings</h4>
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item clearfix">
+										<div>Compliance &amp; Statutory Requirements\Victorian Requirements\<strong>School Governance</strong></div>
+									</li>
+									<li class="list-group-item clearfix">
+
+										<div>Compliance &amp; Statutory Requirements\Victorian Requirements\<strong>Curriculum & Student Learning</strong></div>
+									</li>
+									<li class="list-group-item clearfix">
+										<div>Organizational & Governance Requirements\OHS & Property\<strong>Master Facility Planning</strong></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="archiveHistory">
+							<div class="panel panel-default">
+								<div class="panel-heading clearfix">
+									<h4 class="panel-title">Resource archives and history</h4>
+								</div>
+								<div class="panel-body">
+									no records
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="modal-spare" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -531,7 +728,7 @@
 	</div>
 	<!-- /.modals -->
 
-	<div>
+		<!-- Top Menu -->
 		<div id="topOfMaster">
 			<!-- Logo -->
 			<div id="topLogo" class="logo" style="background-image:url(&#39;/CISMedia/Images//ModuleBanners/SIMON.gif&#39;);">
@@ -587,10 +784,8 @@
 
 											<a href="/WebModules/SystemAdministration/SystemAdministration.aspx" class="SystemsAdmin">Systems Admin</a>
 										</li>
-										<span><li class="divider"></li></span>
+										<li class="divider"></li>
 										<li id="ContentPlaceHolder1_WebUserControlTopMenu_ctl01_ctl05_Li1">
-
-
 											<a href="/WebsiteRedirects/SchoolHomePageRedirect.aspx" class="SchoolHomePage">School Home Page</a>
 										</li>
 										<li id="ContentPlaceHolder1_WebUserControlTopMenu_ctl01_ctl06_Li1">
@@ -628,7 +823,7 @@
 
 											<a href="/WebModules/Forums/ForumsWorkDesk.aspx" class="Forums">Forums</a>
 										</li>
-										<span><li class="divider"></li></span>
+										<li class="divider"></li>
 										<li id="ContentPlaceHolder1_WebUserControlTopMenu_ctl01_ctl14_Li1">
 
 
@@ -708,7 +903,7 @@
 
 											<a href="/WebModules/Masquerade/Masquerade.aspx" class="WorkdeskMasquerade">Masquerade</a>
 										</li>
-										<span><li class="divider"></li></span>
+										<li class="divider"></li>
 										<li id="ContentPlaceHolder1_WebUserControlTopMenu_ctl03_ctl04_Li1">
 
 
@@ -731,11 +926,10 @@
 			</nav>
 
 		</div>
-
+		<!-- End Top Menu -->
 		<!-- Menu Color Location -->
-		<div id="ContentPlaceHolder1_menuBarColor" class="menuColorLocation" style="background-color:rgb(1,&#32;46,&#32;109);"></div>
-
-		<!-- Page Menu -->
+		<div id="ContentPlaceHolder1_menuBarColor" class="menuColorLocation" style="background-color:rgb(201, 30, 30);"></div>
+		<!-- Horizontal Nav -->
 		<nav id="desktopNavbar" class="navbar navbar-default marginBottom-0 pageMenuNav" role="navigation">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0">
@@ -748,8 +942,6 @@
 			<div class="collapse navbar-collapse PageMenu OnlyPageMenu DesktopMenu" id="navbar-collapse-0">
 				<ul class="nav navbar-nav pageMenuNav">
 					<li id="Li1">
-
-
 						<a href="" class="dropdown-toggle " data-toggle="dropdown">
 							<b class="caret"></b>
 						</a>
@@ -757,486 +949,28 @@
 						<ul id="ul1" class="dropdown-menu&#32;multi-level">
 							<!-- the page_load adds MenuButtons here -->
 							<li id="ctl00_Li1">
-
-
-								<a href="/WebModules/ResourceBookings/ResourceBookingsWorkDesk.aspx" class="ResourceBookings">Resource Bookings</a>
+								<a href="http://127.0.0.1/pages/simon.html" >e-Sort Overview</a>
 							</li>
 							<li id="ctl01_Li1">
-
-
-								<a href="/WebModules/LearningAreas/LearningAreasWorkDesk.aspx" class="LearningAreas">Learning Areas</a>
+								<a href="http://127.0.0.1/pages/simon.html#notificationsRow" >Notifications</a>
 							</li>
 							<li id="ctl02_Li1">
-
-
-								<a href="" class="dropdown-toggle SchoolLists" data-toggle="dropdown">
-									School Lists<b class="caret"></b>
+								<a href="http://127.0.0.1/pages/simon.html#riskRegisterRow" >
+									Risk Register
 								</a>
-								<!-- is now a server control -->
-								<ul id="ctl02_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="ctl02_ctl00_Li1">
-
-
-										<a href="" class="dropdown-toggle StudentLists" data-toggle="dropdown">
-											Student Lists<b class="caret"></b>
-										</a>
-										<!-- is now a server control -->
-										<ul id="ctl02_ctl00_ul1" class="dropdown-menu&#32;multi-level">
-											<!-- the page_load adds MenuButtons here -->
-											<li id="ctl02_ctl00_ctl00_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/ClassListReport.aspx" class="ClassList">Class List</a>
-											</li>
-											<li id="ctl02_ctl00_ctl01_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/HomeroomListReport.aspx" class="HomeroomList">Homeroom List</a>
-											</li>
-											<li id="ctl02_ctl00_ctl02_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/YearLevelListReport.aspx" class="YearLevelList">Year Level List</a>
-											</li>
-											<li id="ctl02_ctl00_ctl03_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/SubjectHistoryReport.aspx" class="StudentSubjectList">Student Subject List</a>
-											</li>
-											<li id="ctl02_ctl00_ctl04_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/FullStudentListReport.aspx" class="FullStudentList">Full Student List</a>
-											</li>
-											<li id="ctl02_ctl00_ctl05_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/HouseListReport.aspx" class="HouseList">House List</a>
-											</li>
-											<li id="ctl02_ctl00_ctl06_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/StudentLabelsReport.aspx" class="StudentLabels">Student Labels</a>
-											</li>
-											<li id="ctl02_ctl00_ctl07_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/BoardingHouseListReport.aspx" class="BoardingHouseList">Boarding Houses</a>
-											</li>
-										</ul>
-
-									</li>
-									<li id="ctl02_ctl01_Li1">
-
-
-										<a href="" class="dropdown-toggle StaffLists" data-toggle="dropdown">
-											Staff Lists<b class="caret"></b>
-										</a>
-										<!-- is now a server control -->
-										<ul id="ctl02_ctl01_ul1" class="dropdown-menu&#32;multi-level">
-											<!-- the page_load adds MenuButtons here -->
-											<li id="ctl02_ctl01_ctl00_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Staff/StaffListReport.aspx" class="StaffList">Staff List</a>
-											</li>
-											<li id="ctl02_ctl01_ctl01_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Staff/HomeroomTeacherReport.aspx" class="HomeroomTeacherList">Homeroom Teacher List</a>
-											</li>
-											<li id="ctl02_ctl01_ctl02_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Staff/DomainCoordinatorReport.aspx" class="DomainCoordinatorList">Domain Coordinator List</a>
-											</li>
-										</ul>
-
-									</li>
-								</ul>
-
 							</li>
 							<li id="ctl03_Li1">
-
-
-								<a href="" class="dropdown-toggle Profiles" data-toggle="dropdown">
-									Profiles<b class="caret"></b>
+								<a href="http://127.0.0.1/pages/simon.html#e-SortLibraryRow" >
+									e-Sort Libraries
 								</a>
-								<!-- is now a server control -->
-								<ul id="ctl03_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="ctl03_ctl00_Li1">
-
-
-										<a href="/WebModules/Profiles/Student/SelectStudentProfile.aspx" class="StudentProfiles">Student Profiles</a>
-									</li>
-									<li id="ctl03_ctl01_Li1">
-
-
-										<a href="/WebModules/Profiles/Student/SelectStudentProfileByPastoral.aspx" class="StudentProfilesPastoral">Student Profile By Pastoral</a>
-									</li>
-									<li id="ctl03_ctl02_Li1">
-
-
-										<a href="/WebModules/Profiles/Staff/SelectStaffProfile.aspx" class="StaffProfiles">Staff Profiles</a>
-									</li>
-								</ul>
-
-							</li>
-							<li>
-								<a href="/WebModules/StudentAttendance/StudentAttendanceWorkDesk.aspx" class="StudentAttendance">Student Attendance</a>
-							</li>
-							<li>
-								<a href="" class="active dropdown-toggle Profiles" data-toggle="dropdown" style="color: #000 !important;background-color: #e6e6e6 !important;">
-									e-SORT <b class="caret"></b>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Notifications</a></li>
-									<li><a href="#">e-SORT Library</a></li>
-									<li><a href="#">Risk Register</a></li>
-								</ul>
 							</li>
 						</ul>
-
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<!-- END Page Menu -->
-		<!-- Mobile Menu -->
-		<nav id="mobileNavbar" class="navbar navbar-default">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" id="mobileNavButton">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="PageMenu mobileNavMenu" id="Navbar">
-				<!-- Page Menu (mobile) -->
-				<ul class="nav navbar-nav PageMenuMobile">
-					<li id="_Li1">
-
-
-						<a href="" class="dropdown-toggle " data-toggle="dropdown">
-							<b class="caret"></b>
-						</a>
-						<!-- is now a server control -->
-						<ul id="_ul1" class="dropdown-menu&#32;multi-level">
-							<!-- the page_load adds MenuButtons here -->
-							<li id="_ctl00_Li1">
-
-
-								<a href="/WebModules/ResourceBookings/ResourceBookingsWorkDesk.aspx" class="ResourceBookings">Resource Bookings</a>
-							</li>
-							<li id="_ctl01_Li1">
-
-
-								<a href="/WebModules/LearningAreas/LearningAreasWorkDesk.aspx" class="LearningAreas">Learning Areas</a>
-							</li>
-							<li id="_ctl02_Li1">
-
-
-								<a href="" class="dropdown-toggle SchoolLists" data-toggle="dropdown">
-									School Lists<b class="caret"></b>
-								</a>
-								<!-- is now a server control -->
-								<ul id="_ctl02_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="_ctl02_ctl00_Li1">
-
-
-										<a href="" class="dropdown-toggle StudentLists" data-toggle="dropdown">
-											Student Lists<b class="caret"></b>
-										</a>
-										<!-- is now a server control -->
-										<ul id="_ctl02_ctl00_ul1" class="dropdown-menu&#32;multi-level">
-											<!-- the page_load adds MenuButtons here -->
-											<li id="_ctl02_ctl00_ctl00_Li1">
-												<a href="/WebModules/SchoolLists/Student/ClassListReport.aspx" class="ClassList">Class List</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl01_Li1">
-												<a href="/WebModules/SchoolLists/Student/HomeroomListReport.aspx" class="HomeroomList">Homeroom List</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl02_Li1">
-												<a href="/WebModules/SchoolLists/Student/YearLevelListReport.aspx" class="YearLevelList">Year Level List</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl03_Li1">
-												<a href="/WebModules/SchoolLists/Student/SubjectHistoryReport.aspx" class="StudentSubjectList">Student Subject List</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl04_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/FullStudentListReport.aspx" class="FullStudentList">Full Student List</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl05_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/HouseListReport.aspx" class="HouseList">House List</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl06_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/StudentLabelsReport.aspx" class="StudentLabels">Student Labels</a>
-											</li>
-											<li id="_ctl02_ctl00_ctl07_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Student/BoardingHouseListReport.aspx" class="BoardingHouseList">Boarding Houses</a>
-											</li>
-										</ul>
-
-									</li>
-									<li id="_ctl02_ctl01_Li1">
-
-
-										<a href="" class="dropdown-toggle StaffLists" data-toggle="dropdown">
-											Staff Lists<b class="caret"></b>
-										</a>
-										<!-- is now a server control -->
-										<ul id="_ctl02_ctl01_ul1" class="dropdown-menu&#32;multi-level">
-											<!-- the page_load adds MenuButtons here -->
-											<li id="_ctl02_ctl01_ctl00_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Staff/StaffListReport.aspx" class="StaffList">Staff List</a>
-											</li>
-											<li id="_ctl02_ctl01_ctl01_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Staff/HomeroomTeacherReport.aspx" class="HomeroomTeacherList">Homeroom Teacher List</a>
-											</li>
-											<li id="_ctl02_ctl01_ctl02_Li1">
-
-
-												<a href="/WebModules/SchoolLists/Staff/DomainCoordinatorReport.aspx" class="DomainCoordinatorList">Domain Coordinator List</a>
-											</li>
-										</ul>
-
-									</li>
-								</ul>
-
-							</li>
-							<li id="_ctl03_Li1">
-
-
-								<a href="" class="dropdown-toggle Profiles" data-toggle="dropdown">
-									Profiles<b class="caret"></b>
-								</a>
-								<!-- is now a server control -->
-								<ul id="_ctl03_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="_ctl03_ctl00_Li1">
-
-
-										<a href="/WebModules/Profiles/Student/SelectStudentProfile.aspx" class="StudentProfiles">Student Profiles</a>
-									</li>
-									<li id="_ctl03_ctl01_Li1">
-
-
-										<a href="/WebModules/Profiles/Student/SelectStudentProfileByPastoral.aspx" class="StudentProfilesPastoral">Student Profile By Pastoral</a>
-									</li>
-									<li id="_ctl03_ctl02_Li1">
-
-
-										<a href="/WebModules/Profiles/Staff/SelectStaffProfile.aspx" class="StaffProfiles">Staff Profiles</a>
-									</li>
-								</ul>
-
-							</li>
-							<li id="_ctl04_Li1">
-
-
-								<a href="/WebModules/StudentAttendance/StudentAttendanceWorkDesk.aspx" class="StudentAttendance">Student Attendance</a>
-							</li>
-						</ul>
-
-					</li>
-				</ul>
-				<!-- Top Menu (mobile) -->
-				<ul class="nav navbar-nav TopMenuMobile">
-					<li id="_Li1">
-
-
-						<a href="" class="dropdown-toggle " data-toggle="dropdown">
-							<b class="caret"></b>
-						</a>
-						<!-- is now a server control -->
-						<ul id="_ul1" class="dropdown-menu&#32;multi-level">
-							<!-- the page_load adds MenuButtons here -->
-							<li id="_ctl00_Li1">
-
-
-								<a href="/" class="WorkDesk">Work Desk Home</a>
-							</li>
-							<li id="_ctl01_Li1">
-
-
-								<a href="" class="dropdown-toggle Resources" data-toggle="dropdown">
-									Resources<b class="caret"></b>
-								</a>
-								<!-- is now a server control -->
-								<ul id="_ctl01_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="_ctl01_ctl00_Li1">
-
-
-										<a href="/WebModules/CurriculumAdministration/CurriculumAdministrationWorkDesk.aspx" class="CurriculumAdmin">Curriculum Admin</a>
-									</li>
-									<li id="_ctl01_ctl01_Li1">
-
-
-										<a href="/WebModules/SchoolAdministration/SchoolAdministration.aspx" class="SchoolAdmin">School Admin</a>
-									</li>
-									<li id="_ctl01_ctl02_Li1">
-
-
-										<a href="/WebModules/SiteAdministration/SiteAdministration.aspx" class="SiteAdmin">Site Admin</a>
-									</li>
-									<li id="_ctl01_ctl03_Li1">
-
-
-										<a href="/WebModules/SystemAdministration/SystemAdministration.aspx" class="SystemsAdmin">Systems Admin</a>
-									</li>
-									<span><li class="divider"></li></span>
-									<li id="_ctl01_ctl05_Li1">
-
-
-										<a href="/WebsiteRedirects/SchoolHomePageRedirect.aspx" class="SchoolHomePage">School Home Page</a>
-									</li>
-									<li id="_ctl01_ctl06_Li1">
-
-
-										<a href="/WebsiteRedirects/WebMailRedirect.aspx" class="WebMail">Web Mail</a>
-									</li>
-									<li id="_ctl01_ctl07_Li1">
-
-
-										<a href="/WebsiteRedirects/LibraryWebsiteRedirect.aspx" class="LibraryHomePage">Learning Resource Centre</a>
-									</li>
-									<li id="_ctl01_ctl08_Li1">
-
-
-										<a href="/WebsiteRedirects/PrintersRedirect.aspx" class="Printers">Printers</a>
-									</li>
-									<li id="_ctl01_ctl09_Li1">
-
-
-										<a href="/WebModules/DocumentManagementSystem/DocumentManagementSystemWorkDesk.aspx" class="DocumentManagement">Document Management System</a>
-									</li>
-									<li id="_ctl01_ctl10_Li1">
-
-
-										<a href="/WebModules/KnowledgeBanks/KnowledgeBanks.aspx" class="KnowledgeBanks">Knowledge Banks</a>
-									</li>
-									<li id="_ctl01_ctl11_Li1">
-
-
-										<a href="/WebModules/SchoolAdministration/KnowledgeBases/KnowledgeBases.aspx" class="KnowledgeBases">Knowledge Bases</a>
-									</li>
-									<li id="_ctl01_ctl12_Li1">
-
-
-										<a href="/WebModules/Forums/ForumsWorkDesk.aspx" class="Forums">Forums</a>
-									</li>
-									<span><li class="divider"></li></span>
-									<li id="_ctl01_ctl14_Li1">
-
-
-										<a href="/WebModules/StudentAssessment/StudentAssessmentWorkDesk.aspx" class="StudentAssessment">Student Assessment</a>
-									</li>
-									<li id="_ctl01_ctl15_Li1">
-
-
-										<a href="/WebModules/StudentAttendance/StudentAttendanceWorkDesk.aspx" class="StudentAttendanceHome">Student Attendance</a>
-									</li>
-									<li id="_ctl01_ctl16_Li1">
-
-
-										<a href="/WebModules/DailyOrganisation/DailyOrganisationWorkDesk.aspx" class="DailyOrgHome">Daily Organisation</a>
-									</li>
-									<li id="_ctl01_ctl17_Li1">
-
-
-										<a href="/WebModules/ResourceBookings/ResourceBookingsWorkDesk.aspx" class="ResourceBookings">Resource Bookings</a>
-									</li>
-									<li id="_ctl01_ctl18_Li1">
-
-
-										<a href="/WebModules/BehaviouralTracking/BehaviouralTrackingWorkDesk.aspx" class="BehavTrackWorkDesk">Behavioural Tracking</a>
-									</li>
-									<li id="_ctl01_ctl19_Li1">
-
-
-										<a href="/WebModules/LearningAreas/LearningAreasWorkDesk.aspx" class="LearningAreas">Learning Areas</a>
-									</li>
-								</ul>
-
-							</li>
-							<li id="_ctl02_Li1">
-
-
-								<a href="" class="dropdown-toggle Help" data-toggle="dropdown">
-									Help<b class="caret"></b>
-								</a>
-								<!-- is now a server control -->
-								<ul id="_ctl02_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="_ctl02_ctl00_Li1">
-
-
-										<a href="http://help.simonschools.net/" class="SIMONHelp">SIMON Help</a>
-									</li>
-									<li id="_ctl02_ctl01_Li1">
-
-
-										<a href="/WebModules/Help/AboutSimon.aspx" class="AboutSIMON">About SIMON</a>
-									</li>
-								</ul>
-
-							</li>
-							<li id="_ctl03_Li1">
-
-
-								<a href="" class="dropdown-toggle UserMenu" data-toggle="dropdown">
-									User Menu<b class="caret"></b>
-								</a>
-								<!-- is now a server control -->
-								<ul id="_ctl03_ul1" class="dropdown-menu&#32;multi-level">
-									<!-- the page_load adds MenuButtons here -->
-									<li id="_ctl03_ctl00_Li1">
-
-
-										<a href="/WebModules/Profiles/Staff/PersonalPreferences/StaffProfileUserPreferences.aspx?UserGUID=0110AEE1-EA1E-4A79-AFCC-EFAFC95F8C67" class="MySettings_Staff">My Settings</a>
-									</li>
-									<li id="_ctl03_ctl01_Li1">
-
-
-										<a href="/WebModules/Profiles/Staff/GeneralInformation/StaffProfilePersonalDetails.aspx?UserGUID=0110AEE1-EA1E-4A79-AFCC-EFAFC95F8C67" class="MyProfile_Staff">My Profile</a>
-									</li>
-									<li id="_ctl03_ctl02_Li1">
-
-
-										<a href="/WebModules/Masquerade/Masquerade.aspx" class="WorkdeskMasquerade">Masquerade</a>
-									</li>
-									<span><li class="divider"></li></span>
-									<li id="_ctl03_ctl04_Li1">
-
-
-										<a href="/Logout.aspx" class="Logout">Logout</a>
-									</li>
-								</ul>
-
-							</li>
-						</ul>
-
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- END Mobile Menu -->
-		<!-- New Alerts -->
+		<!-- End Horizontal Nav -->
+		<!--  Alerts-topBox -->
 		<div id="ContentPlaceHolder1_AlertsPanel">
 			<div id="alertPanelHeader" class="alert alert-danger alertsPanel">
 				<a href="/WebModules/Alerts/Alerts.aspx" class="alertsPanelLink" tabindex="-2">
@@ -1254,55 +988,846 @@
 			</div>
 		</div>
 
-		<!-- Info Box -->
-		<div id="infoBox" class="well infoBox">
-			<div class="container">
-				<div class="welcome">
-					You are here: SIMON \ e-SORT \ home
+		<!-- Work Desk  -->
+		<div class="panel panel-default workdeskPanel topPanel">
+			<div class="panel-heading workdeskPanelHeading">
+				<span class="panelHeadingtext">
+					e-Sort Overview
+				</span>
+				<div class="panelHeadingLine"></div>
+			</div>
+			<!-- Dashboard Horizontal Items-->
+			<div class="panel-body statisticsPanelBody">
+				<ul>
+					<li>
+						<div class="item">
+							<span class="icon">
+								<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+							</span>
+							<div class="content">
+								<strong>1</strong> New Unread Notifications<br />
+								<strong>2</strong> Notifications incomplete
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span class="icon">
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+							</span>
+							<div class="content oneLine" style="height:26px;">
+								<strong>0</strong> Notifications overdue
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span class="icon">
+								<i class="fa fa-bell-o" aria-hidden="true"></i>
+							</span>
+							<div class="content">
+								<strong>0</strong> Risk Register upcoming reviews<br />
+								<strong>0</strong> Risk Register overdue reviews
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span class="icon">
+								<i class="fa fa-file" aria-hidden="true"></i>
+							</span>
+							<div class="content">
+								<strong>0</strong> Documents requiring review <br />
+								Last e-Sort updated document 01 Aug 2020
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Categories Two-up Panels -->
+		<div class="bottomPanels">
+			<!-- Left Panel -->
+			<div class="leftColumn">
+				<div class="panel panel-default workdeskPanel leftPanel">
+					<div class="panel-heading workdeskPanelHeading">
+						<span class="panelHeadingtext">
+							<i class="fa fa-file-o"></i>&nbsp;&nbsp;Browse eSORT Policies, Procedure &amp; Practices library
+						</span>
+						<div class="panelHeadingLine"></div>
+					</div>
+					<div id="leftPanelBody" class="panel-body">
+						<div id="" class="scrollPanel">
+							<div class="panelInnerContent">
+								<ul class="fa-ul tree-list">
+									<li>
+										<i class="fa fa-li fa-folder-o fa-fw"></i>
+										<span>Compliance & Statutory Requirements</span>
+										<ul class="fa-ul">
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Victorian Requirements
+												<ul class="fa-ul">
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>School Governance (1)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Enrolment (1)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Curriculum & Student Learning (1)</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Australian Requirements
+												<ul class="fa-ul">
+													<li>
+														<a href="#" data-toggle="modal" data-target="#modal-e-SortCategoryDocs"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Principal & Teacher Performance &amp; Professional Development_ (2)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Implementation of a Recognized Curriculum (1)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>National Assessment Program (1)</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<i class="fa fa-li fa-folder-o fa-fw"></i>Organizational &amp; Governance Requirements (Diocesan)
+										<ul class="fa-ul">
+											<li>
+												<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Governance, Vision &amp; Strategic Directions (3) </a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Curriculum &amp; Student Outcomes</a>
+											</li>
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>OHS &amp; Property
+												<ul class="fa-ul">
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Policy (2)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Preventing/Managing Workplace Injuries/Incidents (5)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Maintenance (1)</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Master Facility Planning (1)</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<i class="fa fa-li fa-folder-o fa-fw"></i>Potential Risks
+										<ul class="fa-ul">
+											<li>
+												<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Second Level Item (1)</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Second Level Item (1)</a>
+											</li>
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level
+												<ul class="fa-ul">
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Third Level Item</a>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
+
+
 			</div>
 
+			<!-- Right Panel -->
+			<div class="rightColumn">
+				<div class="panel panel-default workdeskPanel rightPanel">
+					<div class="panel-heading workdeskPanelHeading">
+						<span class="panelHeadingtext">
+							<i class="fa fa-file"></i>&nbsp;&nbsp;My local Policies, Procedures &amp; Practices by eSORT categories
+						</span>
+						<div class="panelHeadingLine"></div>
+					</div>
+					<div id="rightPanelBody" class="panel-body">
+						<div id="" class="scrollPanel">
+							<div class="panelInnerContent">
+								<ul class="fa-ul tree-list">
+									<li>
+										<i class="fa fa-li fa-folder-o fa-fw"></i>
+										Compliance & Statutory Requirements
+										<ul class="fa-ul">
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Victorian Requirements
+												<ul class="fa-ul">
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>School Governance <i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Enrolment<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Curriculum & Student Learning<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Australian Requirements
+												<ul class="fa-ul">
+													<li>
+														<a href="#" class="local-items"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Principal & Teacher Performance &amp; Professional Development (1)</a>
+														<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+														<i class="fa fa-info fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Implementation of a Recognized Curriculum<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<a href="#" class="local-items"><i class="fa fa-li fa-folder-open-o fa-fw"></i>National Assessment Program (2)</a>
+														<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+														<i class="fa fa-info fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<i class="fa fa-li fa-folder-o fa-fw"></i>Organizational &amp; Governance Requirements (Diocesan)
+										<ul class="fa-ul">
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Governance, Vision &amp; Strategic Directions<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+											</li>
+											<li>
+												<a href="#" class="local-items"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Curriculum &amp; Student Outcomes (1)</a>
+												<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+												<i class="fa fa-info fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
+											</li>
+											<li>
+												<a href="#" class="schoolItems">OHS &amp; Property</a>
+												<ul class="fa-ul">
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Policy<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Preventing/Managing Workplace Injuries/Incidents<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Maintenance<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Master Facility Planning<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<i class="fa fa-li fa-folder-o fa-fw"></i>Potential Risks
+										<ul class="fa-ul">
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Second Level Item<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+											</li>
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Second Level Item<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+											</li>
+											<li>
+												<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level
+												<ul class="fa-ul">
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+													<li>
+														<i class="fa fa-li fa-folder-o fa-fw"></i>Third Level Item<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<!-- END Info Box -->
-		<!-- Work Desk Panels -->
+		<div style="padding-bottom:20px; display:block">&nbsp;</div>
+		<!-- Bootstrap Demo Panels-->
 		<div id="workdesk" class="">
-			<!--<button type=button class="btn btn-default" data-toggle=tooltip data-placement=right title="Tooltip on left">Tooltip on left</button>-->
+			<!---->
 			<div class="container-fluid">
-				<div class="row">
-					<div class="grid-stack">
-						<div id="grid-Notifications-info" class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="2" data-gs-height="5">
-							<div class="grid-stack-item-content well">
-								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
-								<div class="panel panel-primary">
-									<div class="panel-heading">
-										<i class="fa fa-tasks"></i> e-SORT Notifications
+				<div id="notificationsRow" class="row">
+					<div class="col-md-2">
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<i class="fa fa-tasks"></i> e-SORT Notifications
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item"><i class="fa fa-bell fa-fw"></i>&nbsp;New Unread Notifications (1)</li>
+									<li class="list-group-item"><i class="fa fa-exclamation fa-fw"></i> Notifications incomplete (2)</li>
+									<li class="list-group-item"><i class="fa fa-clock-o fa-fw"></i> Notifications overdue (0)</li>
+									<li class="list-group-item"><i class="fa fa-history fa-fw"></i> Notification list</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<span class="heading">Notifications Dashboard Info</span>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-lg-2">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													Total Received
+												</div>
+												<div class="panel-body">
+													<p>1</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-primary">
+												<div class="panel-heading">
+													Most Recent
+												</div>
+												<div class="panel-body">
+													<p>01 Jan 2020</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-success">
+												<div class="panel-heading">
+													By Category
+												</div>
+												<div class="panel-body">
+													<p>[type]: 2, [type]: 5</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-info">
+												<div class="panel-heading">
+													Last Submitted
+												</div>
+												<div class="panel-body">
+													<p>Name/Date</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-warning">
+												<div class="panel-heading">
+													Last Updated
+												</div>
+												<div class="panel-body">
+													<p>Name/Date</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-danger">
+												<div class="panel-heading">
+													Next Due
+												</div>
+												<div class="panel-body">
+													<p>Name/Date</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
 									</div>
-									<ul class="list-group">
-										<li class="list-group-item"><i class="fa fa-bell fa-fw"></i>&nbsp;New Unread Notifications (1)</li>
-										<li class="list-group-item"><i class="fa fa-exclamation fa-fw"></i> Notifications incomplete (2)</li>
-										<li class="list-group-item"><i class="fa fa-clock-o fa-fw"></i> Notifications overdue (0)</li>
-										<li class="list-group-item"><i class="fa fa-history fa-fw"></i> Notification list</li>
-									</ul>
+									<!-- /.row -->
+									<div class="row">
+										<div class="col-lg-2">
+											<div class="panel panel-green">
+												<div class="panel-heading">
+													Last Seen
+												</div>
+												<div class="panel-body">
+													<p>Name/Date</p>
+												</div>
+											</div>
+
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-yellow">
+												<div class="panel-heading">
+													Last Info Item
+												</div>
+												<div class="panel-body">
+													<p>Name/Date</p>
+												</div>
+											</div>
+
+										</div>
+										<!-- /.col-lg-2 -->
+										<div class="col-lg-2">
+											<div class="panel panel-red">
+												<div class="panel-heading">
+													Last User
+												</div>
+												<div class="panel-body">
+													<p>UserName</p>
+												</div>
+											</div>
+										</div>
+										<!-- /.col-lg-2 -->
+									</div>
+									<p>Table data to list/search all notifications, columns can be sorted to quickly view by:<br />Name | Date | Sent | Who read it first | When Submitted | Who submitted | What type</p>
+									<p>A quick table breakdown of last 'seen' alerts by user.</p>
 								</div>
 							</div>
 						</div>
-						<div id="grid-RiskRegisterDash" class="grid-stack-item" data-gs-x="0" data-gs-y="6" data-gs-width="2" data-gs-height="6">
-							<div class="grid-stack-item-content well">
-								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
-								<div class="panel panel-primary">
-									<div class="panel-heading">
-										<i class="fa fa-tasks"></i>	Risk Register
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<div class="form-inline">
+										<div class="form-group pull-right">
+											<label>Filter by: </label> <select class="form-control" style="width:120px"><option>All</option><option>New</option><option>Incomplete</option></select>
+										</div>
 									</div>
-									<ul class="list-group">
-										<li class="list-group-item"><i class="fa fa-bell-o fa-fw"></i>&nbsp;Upcomming reviews (0)</li>
-										<li class="list-group-item"><i class="fa fa-exclamation fa-fw"></i> Overdue reviews (2)</li>
-										<li class="list-group-item"><i class="fa fa-calendar fa-fw"></i> Last updated: 01 Jan 2020</li>
-										<li class="list-group-item"><i class="fa fa-life-saver fa-fw"></i> View Risk Register</li>
-										<li class="list-group-item"><i class="fa fa-gears fa-fw"></i> Settings</li>
-									</ul>
+									<span><i class="fa fa-newspaper-o fa-lg fa-fw"></i>&nbsp;&nbsp;<span class="heading">e-SORT Notification Sample List</span></span>
+								</div>
+								<div class="panel-body">
+									<div class="clearfix"></div>
+									<div id="abcDraft" class="simon-message simon-message-warning">
+										<div class="row">
+											<div class="col-md-4"><h4>Copy of the 2017 abc xyz draft report</h4></div>
+											<div class="col-md-6">
+												Status: <strong>new <small>(unseen)</small></strong>
+
+											</div><div class="col-md-2 text-right">Sent: 29 Oct 2017 <button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#notification1" title="Toggle" onclick="javascript:toggles(1);"><i id="noticeToggle1" class="fa fa-chevron-up"></i></button></div>
+										</div>
+										<div id="notification1" class="panel-collapse collapse">
+											<div class="row">
+												<div class="col-md-6">
+													<strong>Details:</strong>
+													<p>
+														This example notification description is about a copy of the draft guide-lines for Lorem Ipsum 2017 being now available on e-SORT, the final version will be available on the 29th of November.<br />
+														The description may include or cite places within the document that have changed or need attention drawn to. The document refers to the e-Sort library policy, pratice or prodceedure document linked to this notification.
+													</p>
+													<p>
+														<em>This is a general info message only, you are not required to respond to this notification.</em><br />
+														To view the document, use the button link below, any questions please contact <a href="#">esortuser@some.domain.com.au</a> for more information.
+													</p>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" value="" onclick="demoNotification()">
+															<strong>Unread - tick to mark as seen</strong>
+														</label>
+													</div>
+													<button class="btn btn-default pull-right"><i class="fa fa-download"></i>&nbsp;&nbsp;View Article</button>
+													<p>The linked article '<strong>Lorem Ipsum 2017</strong>' is also listed on e-Sort under the following categories: </p>
+													<ul><li>Compliance & Statutory Requirements\Victorian Requirements\School Governance </li></ul>
+												</div>
+												<div class="col-md-6">
+													<strong>Info: </strong>
+													<ul class="list-group clearfix">
+														<li class="list-group-item">Sections: <span class="badge">(1)</span></li>
+														<li class="list-group-item success">Response required: <span class="badge">No</span></li>
+														<li class="list-group-item">Last Viewed: <span id="abcDraftbadge" class="badge">Unseen</span></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="VRQA2017" class="simon-message simon-message-danger">
+										<div class="row">
+											<div class="col-md-4">
+												<h4>2017 VRAQ</h4>
+											</div>
+											<div class="col-md-6">
+												<div class="row">
+													Status:<i class="fa fa-exclamation fa-lg fa-fw text-danger"></i>0% Complete,<i class="fa fa-calendar fa-lg fa-fw text-danger"></i>Due: 20 Jun 2017
+												</div>
+											</div>
+
+											<div class="col-md-2 text-right">
+												Sent: 05 Feb 2017 <button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#notification3" title="Toggle" onclick="javascript:toggles(3);"><i id="noticeToggle3" class="fa fa-chevron-up"></i></button>
+											</div>
+										</div>
+										<div id="notification3" class="panel-collapse collapse">
+											<div class="row">
+												<div class="col-md-6">
+													<strong>Details:</strong>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel malesuada tortor. In faucibus ullamcorper nisl sed consectetur. Nunc vitae viverra arcu, a pharetra nibh. Donec lorem magna, ultrices id commodo sed, lobortis sagittis ex. Sed id viverra leo. Mauris bibendum, odio in iaculis feugiat, ante risus mattis mi, quis sagittis elit magna quis nunc. In molestie efficitur tempus. Sed massa turpis, varius quis ornare ut, aliquam ut diam. Nam vulputate vel ipsum quis finibus. Curabitur condimentum augue ac libero consequat sagittis.</p>
+													<div>
+														<p><em class="text-info"></em></p>
+														<div class="pull-right">
+															<button class="btn btn-default" onclick="notificationForm(); return false;"><i class="fa fa-edit "></i>&nbsp;&nbsp;Complete Notification Sections</button>&nbsp;&nbsp;
+															<button class="btn btn-default" disabled><i class="fa fa-send-o"></i>&nbsp;&nbsp;Send</button>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<strong>Info: </strong>
+													<ul class="list-group clearfix">
+														<li class="list-group-item">Sections: <span class="badge">(10)</span></li>
+														<li class="list-group-item success">Response required: <span class="badge">Yes</span></li>
+														<li class="list-group-item">Last Viewed: <span class="badge">18 Mar 2017 (by John Dopolopous)</span></li>
+														<li class="list-group-item">Last Modified: <span class="badge">n/a</span></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="VRQA2016" class="simon-message simon-message-success">
+										<div class="row">
+											<div class="col-md-4"><h4>2016 VRAQ</h4></div><div class="col-md-6">Status:<i class="fa fa-check-square-o fa-lg fa-fw"></i>100% Complete,<i class="fa fa-calendar fa-lg fa-fw"></i>Submitted: 24th Dec 2016</div>
+											<div class="col-md-2 text-right">Sent: 12 Jun 2016 <button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#notification2" title="Toggle" onclick="javascript:toggles(2);"><i id="noticeToggle2" class="fa fa-chevron-up"></i></button></div>
+										</div>
+										<div id="notification2" class="panel-collapse collapse">
+											<div class="row">
+												<div class="col-md-6">
+													<strong>Details:</strong><p>
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lectus ante. Nullam eget dignissim est. Fusce at dapibus ante, efficitur accumsan nisl. Fusce eu sagittis nibh. Sed enim mauris, congue egestas enim ac, vehicula varius sem. Nam faucibus placerat tellus, pulvinar sollicitudin mi facilisis non. Ut et pellentesque nulla.
+													</p>
+													<div>
+														<p><em class="text-info">This notification has been completed and was submitted on the: 30 Aug 2016</em></p>
+														<div class="pull-right">
+															<button class="btn btn-default"><i class="fa fa-binoculars "></i>&nbsp;&nbsp;View Details</button>&nbsp;&nbsp;
+															<button class="btn btn-default"><i class="fa fa-file-text"></i>&nbsp;&nbsp;View Report</button>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<strong>Info: </strong>
+													<ul class="list-group clearfix">
+														<li class="list-group-item">Sections: <span class="badge">(8)</span></li>
+														<li class="list-group-item success">Response required: <span class="badge">Yes</span></li>
+														<li class="list-group-item">Last Viewed: <span class="badge">29 Aug 2016 (by John Dopolopous)</span></li>
+														<li class="list-group-item">Last Modified: <span class="badge">n/a</span></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div>
-						</div>							
+						</div>
+					</div>
+				</div>
+				<div id="riskRegisterRow" class="row">
+					<div class="col-md-2">
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<i class="fa fa-tasks"></i>	Risk Register
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item"><i class="fa fa-bell-o fa-fw"></i>&nbsp;Upcoming reviews (0)</li>
+									<li class="list-group-item"><i class="fa fa-exclamation fa-fw"></i> Overdue reviews (2)</li>
+									<li class="list-group-item"><i class="fa fa-calendar fa-fw"></i> Last updated: 01 Jun 2016</li>
+									<li class="list-group-item"><i class="fa fa-group fa-fw"></i> Next Reviews by User
+										<ul>
+											<li>Jand Doe 18 Oct 2018</li>
+											<li>John Smith 25 Apr 2018</li>
+											<li>Mary Anatarupra 25 Apr 2017</li>
+										</ul>
+									</li>
+									<li class="list-group-item"><i class="fa fa-user fa-fw"></i> Items without an active Owner (0)</li>
+									<li class="list-group-item"><i class="fa fa-gears fa-fw"></i> Settings</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<i class="fa fa-life-saver fa-lg fa-fw"></i>&nbsp;&nbsp;<span class="heading">My School Risk Register</span>
+								</div>
+								<div class="panel-body">
+									<div class="form-inline">
+										<div class="form-group">
+											<strong>Options:</strong> <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-riskItem-edit"><i class="fa fa-plus fa-fw"></i>Add New Item</button>
+										</div>
+										<div class="form-group">
+											<div class="btn-group">
+												<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+													<i class="fa fa-plus fa-fw"></i>Add an e-Sort Recommended item <span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu">
+													<li><a href="#">e-Sort Risk No. One</a></li>
+													<li><a href="#">e-Sort Risk No. Two</a></li>
+													<li><a href="#">e-Sort Risk No. Three</a></li>
+													<li><a href="#">e-Sort Risk No. Four</a></li>
+													<li><a href="#">e-Sort Risk No. Five</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<table id="tblRiskRegister" class="table table-striped table-bordered table-condensed" >
+										<thead>
+											<tr>
+												<th>Activity/Risk</th>
+												<th>Owner</th>
+												<th>Last update</th>
+												<th>Next Review</th>
+												<th>Rating</th>
+												<th>Risk Plan</th>
+												<th>Custom1</th>
+												<th>Custom2</th>
+												<th>Custom3</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-danger"></i>Child Protection</td>
+												<td>Mary Anatarupra</td>
+												<td>01 Jun 2016</td>
+												<td>25 Apr 2017</td>
+												<td><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td>
+												<td>Yes</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-success"></i>Power Outage</td>
+												<td>John Smith</td>
+												<td>01 Jun 2016</td>
+												<td>25 Apr 2017</td>
+												<td><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td>
+												<td>Yes</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-info"></i>Extreme Heat days</td>
+												<td>Jane Doe</td>
+												<td>01 Jun 2016</td>
+												<td>18 Oct 2017</td>
+												<td><i class="fa fa-star fa-fw"></i></td>
+												<td>No</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-info"></i>School Excursions <i class="fa fa-exclamation-triangle fa-fw fa-pull-right text-danger" title="This Item Review Date has expired!" ></i></td>
+												<td>John Smith</td>
+												<td>01 Jun 2015</td>
+												<td>01 Jun 2016</td>
+												<td><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td>
+												<td>No</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-success"></i>Fire Extingushers Check</td>
+												<td>Jane Doe</td>
+												<td>22 Mar 2016</td>
+												<td>22 Mar 2017</td>
+												<td><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td>
+												<td>No</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-success"></i>Evacuation Drill <i class="fa fa-exclamation-triangle fa-fw fa-pull-right text-danger" title="This Item Review Date has expired!" ></i></td>
+												<td>John Smith</td>
+												<td>20 Feb 2016</td>
+												<td>28 May 2016</td>
+												<td><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td>
+												<td>Yes</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+											<tr>
+												<td><i class="fa fa-square fa-fw text-success"></i>Severe sporting injury through incident</td>
+												<td>Jane Doe</td>
+												<td>01 Jun 2016</td>
+												<td>01 Jun 2017</td>
+												<td ><i class="fa fa-star fa-fw"></i></td>
+												<td>Yes</td>
+												<td>6</td>
+												<td>7</td>
+												<td>8</td>
+												<td><i class="fa fa-edit fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-info fa-fw fa-lg"></i></td>
+												<td><i class="fa fa-remove fa-fw fa-lg"></i></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="panel-footer">
+									Colour key: <i class="fa fa-square fa-fw text-success"></i>My Items, <i class="fa fa-square fa-fw text-info"></i>e-Sort recommended Items, <i class="fa fa-square fa-fw text-danger"></i>e-SORT Mandatory Items
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="e-SortLibraryRow" class="row">
+					<div class="col-md-2">
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<i class="fa fa-tasks"></i>	e-Sort Library
+								</div>
+								<div class="list-group">
+									<div class="list-group-item disabled">Browse Options:</div>
+									<button type="button" class="list-group-item">View Both Category Trees <i class="fa fa-angle-right fa-fw fa-pull-right"></i></button>
+									<button type="button" class="list-group-item active">View e-Sort Document List <i class="fa fa-angle-right fa-fw fa-pull-right"></i></button>
+									<button type="button" class="list-group-item">View my Linked Document List <i class="fa fa-angle-right fa-fw fa-pull-right"></i></button>
+									<div class="list-group-item disabled">Recent Updates:</div>
+									<div class="list-group">
+										<a href="#" class="list-group-item">
+											<h4 class="list-group-item-heading">01 Nov 2016</h4>
+											<p class="list-group-item-text"><i class="fa fa-angle-right fa-fw fa-pull-right"></i>Document 'abc' 01 Nov 2016</p>
+										</a>
+									</div>
+									<div class="list-group">
+										<a href="#" class="list-group-item">
+											<h4 class="list-group-item-heading">26 Aug 2016</h4>
+											<p class="list-group-item-text"><i class="fa fa-angle-right fa-fw fa-pull-right"></i>Document 'xyz'</p>
+										</a>
+									</div>
+									<div class="list-group">
+										<a href="#" class="list-group-item">
+											<h4 class="list-group-item-heading">22 Sep 2016</h4>
+											<p class="list-group-item-text"><i class="fa fa-angle-right fa-fw fa-pull-right"></i>Document 'alpha-omega</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="thumbnail">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<i class="fa fa-book"></i>	e-Sort Library List
+								</div>
+								<div class="panel-body">
+									<table id="pppTable" class="table table-striped table-bordered table-hover">
+										<thead><tr><th>Policy, Procedures &amp; Practices</th><th>Last Update</th><th></th></tr></thead>
+										<tbody>
+											<tr>
+												<td>
+													Curriculum framework
+												</td>
+												<td>18/05/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+											<tr>
+												<td>
+													Compliance with the Working with Children Act 2005
+												</td>
+												<td>20/06/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle" data-toggle="modal" data-target="#modal-eSortDoc-info"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+											<tr>
+												<td>
+													Democratic principles
+												</td>
+												<td>20/06/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+
+											<tr>
+												<td>
+													Monitoring and reporting on students' performance
+												</td>
+												<td>20/06/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+											<tr>
+												<td>
+													School's annual report that contains the mandatory information and is available to the community
+												</td>
+												<td>20/06/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+											<tr>
+												<td>
+													Student Discipline
+												</td>
+												<td>20/06/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+											<tr>
+												<td>
+													Teacher registration requirements
+												</td>
+												<td>20/06/2016</td>
+												<td><button class="btn btn-sm btn-default btn-circle"><i class='fa fa-info fa-lg'></i></button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="oldGriddleStackRow" class="row">
+					<div class="grid-stack">
+						<!--
 						<div id="grid-eSORT-categoriesList" class="grid-stack-item" data-gs-x="2" data-gs-y="0" data-gs-width="5" data-gs-height="13">
 							<div class="grid-stack-item-content well">
 								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
@@ -1322,10 +1847,10 @@
 																<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>School Governance (1)</a>
 															</li>
 															<li>
-																<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Enrolment (1)</a>	
+																<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Enrolment (1)</a>
 															</li>
 															<li>
-																<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Curriculum & Student Learning (1)</a>	
+																<a href="#"><i class="fa fa-li fa-folder-open-o fa-fw"></i>Curriculum & Student Learning (1)</a>
 															</li>
 														</ul>
 													</li>
@@ -1407,6 +1932,8 @@
 								</div>
 							</div>
 						</div>
+							-->
+						<!--
 						<div id="grid-LOCAL-A-categoriesList" class="grid-stack-item" data-gs-x="7" data-gs-y="0" data-gs-width="5" data-gs-height="10">
 							<div class="grid-stack-item-content well">
 								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
@@ -1511,317 +2038,144 @@
 								</div>
 							</div>
 						</div>
-						<div id="grid-LOCAL-B-categoriesList" class="grid-stack-item" data-gs-x="7" data-gs-y="11" data-gs-width="5" data-gs-height="11">
-							<div class="grid-stack-item-content well">
-								<i class="fa fa-arrows fa-fw fa-pull-right" style="position:absolute; top:2px;right:2px;"></i>
-									<h4>
-										<i class="fa fa-file"></i>&nbsp;&nbsp;My local Policies, Procedures &amp; Practices by eSORT categories
-									</h4>
-									<ul class="category-list tree-list">
-											<li>
-												<span><i class="fa fa-folder-o fa-fw"></i>Compliance & Statutory Requirements</span>
-												<ul>
-													<li>
-														<span><i class="fa fa-folder-o fa-fw"></i>Victorian Requirements</span>
-														<ul>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> School Governance</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i  class="fa fa-folder-o fa-fw"></i> Enrolment</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i  class="fa fa-folder-o fa-fw"></i> Curriculum & Student Learning</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-														</ul>
-													</li>
-													<li>
-														<span><i class="fa fa-folder-o fa-fw"></i>Australian Requirements</span>
-														<ul>
-															<li>
-																<a class="expandble" href="#demoDocs1" data-toggle="collapse" onclick="togglesLeftChevron('#demo1');" >
-																	<i id="demo1" class="fa fa-folder-open-o fa-fw"></i> Principal & Teacher Performance &amp; Professional Development (1)
-																</a>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-																<i class="fa fa-info fa-fw fa-lg fa-pull-right"  data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
-																<ul id="demoDocs1" class="collapse">
-																	<li>Document #32432</li>
-																</ul>
-															</li>
-															<li>
-																<span><i  class="fa fa-folder-o fa-fw"></i> Implementation of a Recognized Curriculum</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 	
-															</li>
-															<li>
-																<a class="expandble" href="#demoDocs2" data-toggle="collapse" onclick="togglesLeftChevron('#demo2');" >
-																	<i id="demo2" class="fa fa-folder-open-o fa-fw"></i> National Assessment Program (2)
-																</a>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-																<i class="fa fa-info fa-fw fa-lg fa-pull-right"  data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
-																<ul id="demoDocs2" class="collapse">
-																	<li>Document #32432</li>
-																	<li>Document #79824</li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<span><i class="fa fa-folder-o fa-fw"></i>Organizational &amp; Governance Requirements (Diocesan)</span>
-												<ul>
-													<li>
-														<span><i class="fa fa-folder-o fa-fw"></i> Governance, Vision &amp; Strategic Directions</span>
-														<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-													</li>
-													<li>
-														<a class="expandble" href="#demoDocs3" data-toggle="collapse" onclick="togglesLeftChevron('#demo3');" >
-															<i id="demo3" class="fa fa-folder-open-o fa-fw"></i> Curriculum &amp; Student Outcomes (1)
-														</a>
-														<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-														<i class="fa fa-info fa-fw fa-lg fa-pull-right"  data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
-														<ul id="demoDocs3" class="collapse sub-list">
-															<li>Document #32432</li>
-														</ul>
-													</li>
-													<li>
-														<span class="schoolItems"><i class="fa fa-folder-o fa-fw"></i>OHS &amp; Property</span>
-														<ul>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Policy</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Preventing/Managing Workplace Injuries/Incidents</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Maintenance</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Master Facility Planning</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<span><i class="fa fa-folder-o fa-fw"></i>Potential Risks</span>
-												<ul>
-													<li>
-														<span><i class="fa fa-folder-o fa-fw"></i>Second Level Item</span>
-													</li>
-													<li>
-														<span><i class="fa fa-folder-o fa-fw"></i>Second Level Item</span>
-													</li>
-													<li>
-														<span><i class="fa fa-folder-o fa-fw"></i>Third Level</span>
-														<ul>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-															<li>
-																<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
-																<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i> 
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
+							-->
+						<!--
+												<div id="grid-LOCAL-B-categoriesList" class="grid-stack-item" data-gs-x="7" data-gs-y="11" data-gs-width="5" data-gs-height="11">
+													<div class="grid-stack-item-content well">
+														<i class="fa fa-arrows fa-fw fa-pull-right" style="position:absolute; top:2px;right:2px;"></i>
+															<h4>
+																<i class="fa fa-file"></i>&nbsp;&nbsp;My local Policies, Procedures &amp; Practices by eSORT categories
+															</h4>
+															<ul class="category-list tree-list">
+																	<li>
+																		<span><i class="fa fa-folder-o fa-fw"></i>Compliance & Statutory Requirements</span>
+																		<ul>
+																			<li>
+																				<span><i class="fa fa-folder-o fa-fw"></i>Victorian Requirements</span>
+																				<ul>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> School Governance</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i  class="fa fa-folder-o fa-fw"></i> Enrolment</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i  class="fa fa-folder-o fa-fw"></i> Curriculum & Student Learning</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																				</ul>
+																			</li>
+																			<li>
+																				<span><i class="fa fa-folder-o fa-fw"></i>Australian Requirements</span>
+																				<ul>
+																					<li>
+																						<a class="expandble" href="#demoDocs1" data-toggle="collapse" onclick="togglesLeftChevron('#demo1');" >
+																							<i id="demo1" class="fa fa-folder-open-o fa-fw"></i> Principal & Teacher Performance &amp; Professional Development (1)
+																						</a>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																						<i class="fa fa-info fa-fw fa-lg fa-pull-right"  data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
+																						<ul id="demoDocs1" class="collapse">
+																							<li>Document #32432</li>
+																						</ul>
+																					</li>
+																					<li>
+																						<span><i  class="fa fa-folder-o fa-fw"></i> Implementation of a Recognized Curriculum</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<a class="expandble" href="#demoDocs2" data-toggle="collapse" onclick="togglesLeftChevron('#demo2');" >
+																							<i id="demo2" class="fa fa-folder-open-o fa-fw"></i> National Assessment Program (2)
+																						</a>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																						<i class="fa fa-info fa-fw fa-lg fa-pull-right"  data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
+																						<ul id="demoDocs2" class="collapse">
+																							<li>Document #32432</li>
+																							<li>Document #79824</li>
+																						</ul>
+																					</li>
+																				</ul>
+																			</li>
+																		</ul>
+																	</li>
+																	<li>
+																		<span><i class="fa fa-folder-o fa-fw"></i>Organizational &amp; Governance Requirements (Diocesan)</span>
+																		<ul>
+																			<li>
+																				<span><i class="fa fa-folder-o fa-fw"></i> Governance, Vision &amp; Strategic Directions</span>
+																				<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																			</li>
+																			<li>
+																				<a class="expandble" href="#demoDocs3" data-toggle="collapse" onclick="togglesLeftChevron('#demo3');" >
+																					<i id="demo3" class="fa fa-folder-open-o fa-fw"></i> Curriculum &amp; Student Outcomes (1)
+																				</a>
+																				<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																				<i class="fa fa-info fa-fw fa-lg fa-pull-right"  data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').show()"></i>
+																				<ul id="demoDocs3" class="collapse sub-list">
+																					<li>Document #32432</li>
+																				</ul>
+																			</li>
+																			<li>
+																				<span class="schoolItems"><i class="fa fa-folder-o fa-fw"></i>OHS &amp; Property</span>
+																				<ul>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Policy</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Preventing/Managing Workplace Injuries/Incidents</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Maintenance</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Master Facility Planning</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																				</ul>
+																			</li>
+																		</ul>
+																	</li>
+																	<li>
+																		<span><i class="fa fa-folder-o fa-fw"></i>Potential Risks</span>
+																		<ul>
+																			<li>
+																				<span><i class="fa fa-folder-o fa-fw"></i>Second Level Item</span>
+																			</li>
+																			<li>
+																				<span><i class="fa fa-folder-o fa-fw"></i>Second Level Item</span>
+																			</li>
+																			<li>
+																				<span><i class="fa fa-folder-o fa-fw"></i>Third Level</span>
+																				<ul>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																					<li>
+																						<span><i class="fa fa-folder-o fa-fw"></i> Third Level Item</span>
+																						<i class="fa fa-plus-square-o fa-fw fa-lg fa-pull-right" data-toggle="modal" data-target="#modal-docs-local" onclick="$('#pnlLinkedList').hide()"></i>
+																					</li>
+																				</ul>
+																			</li>
+																		</ul>
+																	</li>
 
-										</ul>
-							</div>
-						</div>
-						<div id="grid-Notifications" class="grid-stack-item" data-gs-x="2" data-gs-y="22" data-gs-width="10" data-gs-height="12">
-							<div class="grid-stack-item-content well">
-								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
-								<div class="panel panel-primary">
-									<div class="panel-heading">
-										<div class="form-inline">
-											<div class="form-group pull-right">
-												<label>Filter by: </label> <select class="form-control" style="width:120px"><option>All</option><option>New</option><option>Incomplete</option></select>
-											</div>
-										</div>
-										<span><i class="fa fa-newspaper-o fa-lg fa-fw"></i>&nbsp;&nbsp;<span class="heading">e-SORT Notification List</span></span>
-									</div>
-									<div class="panel-body">
-										<div class="clearfix"></div>
-										<div id="abcDraft" class="simon-message simon-message-warning">
-											<div class="row">
-												<div class="col-md-4"><h4>Copy of the 2017 abc xyz draft report</h4></div>
-												<div class="col-md-6">
-													Status:<i class="fa fa-circle-o-notch fa-lg fa-fw fa-spin text-warning" ></i>New <small>(unseen)</small>
-													
-												</div><div class="col-md-2 text-right">Sent: 29 Oct 2017 <button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#notification1" title="Toggle" onclick="javascript:toggles(1);"><i id="noticeToggle1" class="fa fa-chevron-up"></i></button></div>
-											</div>
-											<div id="notification1" class="panel-collapse collapse">
-											<div class="row" >
-												<div class="col-md-6">
-													<strong>Details:</strong><p>
-														This notification is about a copy of the draft guide-lines for Lorem Ipsum 2017 being now available on e-SORT, the final version will be available on the 29th of November.<br />
-														The draft is listed under Level1\Level2\Level3, please contact <a href="#">esortuser@some.domain.com.au</a> for more information.
-													</p>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox" value="">
-															<strong>Unread - tick to mark as seen</strong>
-														</label>
-													</div>
-													<button class="btn btn-default pull-right"><i class="fa fa-download"></i>&nbsp;&nbsp;View Article</button>
-												</div>
-												<div class="col-md-6">
-													<strong>Info: </strong>
-													<ul class="list-group clearfix">
-														<li class="list-group-item">Sections: <span class="badge">(1)</span></li>
-														<li class="list-group-item success">Response required: <span class="badge">No</span></li>
-														<li class="list-group-item">Last Viewed: <span class="badge">Unseen</span></li>
-													</ul>
-												</div>
-											</div>
-												</div>
-										</div>
-										<div id="VRQA2017" class="simon-message simon-message-danger">
-											<div class="row">
-												<div class="col-md-4">
-													<h4>2017 VRAQ</h4>
-												</div>
-												<div class="col-md-6">
-													<div class="row">
-														Status:Viewed,<i class="fa fa-exclamation fa-lg fa-fw text-danger"></i>0% Complete,<i class="fa fa-calendar fa-lg fa-fw text-danger"></i>Due: 20 Jun 2017
+																</ul>
 													</div>
 												</div>
-											
-											<div class="col-md-2 text-right">
-												Sent: 05 Feb 2017 <button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#notification3" title="Toggle" onclick="javascript:toggles(3);"><i id="noticeToggle3" class="fa fa-chevron-up"></i></button>
-											</div>
-											</div>
-											<div id="notification3" class="panel-collapse collapse">
-												<div class="row">
-													<div class="col-md-6">
-														<strong>Details:</strong>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel malesuada tortor. In faucibus ullamcorper nisl sed consectetur. Nunc vitae viverra arcu, a pharetra nibh. Donec lorem magna, ultrices id commodo sed, lobortis sagittis ex. Sed id viverra leo. Mauris bibendum, odio in iaculis feugiat, ante risus mattis mi, quis sagittis elit magna quis nunc. In molestie efficitur tempus. Sed massa turpis, varius quis ornare ut, aliquam ut diam. Nam vulputate vel ipsum quis finibus. Curabitur condimentum augue ac libero consequat sagittis.</p>
-														<div>
-															<p><em class="text-info"></em></p>
-															<div class="pull-right">
-																<button class="btn btn-default" onclick="notificationForm(); return false;"><i class="fa fa-edit "></i>&nbsp;&nbsp;Complete Notification Sections</button>&nbsp;&nbsp;
-																<button class="btn btn-default" disabled><i class="fa fa-send-o"></i>&nbsp;&nbsp;Send</button>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<strong>Info: </strong>
-														<ul class="list-group clearfix">
-															<li class="list-group-item">Sections: <span class="badge">(10)</span></li>
-															<li class="list-group-item success">Response required: <span class="badge">Yes</span></li>
-															<li class="list-group-item">Last Viewed: <span class="badge">18 Mar 2017 (by John Dopolopous)</span></li>
-															<li class="list-group-item">Last Modified: <span class="badge">n/a</span></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="VRQA2016" class="simon-message simon-message-success">
-											<div class="row">
-												<div class="col-md-4"><h4>2016 VRAQ</h4></div><div class="col-md-6">Status:<i class="fa fa-check-square-o fa-lg fa-fw" ></i>100% Complete,<i class="fa fa-calendar fa-lg fa-fw" ></i>Submitted: 24th Dec 2016</div>
-												<div class="col-md-2 text-right">Sent: 12 Jun 2016 <button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#notification2" title="Toggle" onclick="javascript:toggles(2);"><i id="noticeToggle2" class="fa fa-chevron-up"></i></button></div>
-											</div>
-											<div id="notification2" class="panel-collapse collapse">
-												<div class="row">
-													<div class="col-md-6">
-														<strong>Details:</strong><p>
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lectus ante. Nullam eget dignissim est. Fusce at dapibus ante, efficitur accumsan nisl. Fusce eu sagittis nibh. Sed enim mauris, congue egestas enim ac, vehicula varius sem. Nam faucibus placerat tellus, pulvinar sollicitudin mi facilisis non. Ut et pellentesque nulla.
-														</p>
-														<div>
-															<p><em class="text-info">This notification has been completed and was submitted on the: 30 Aug 2016</em></p>
-															<div class="pull-right">
-																<button class="btn btn-default"><i class="fa fa-binoculars "></i>&nbsp;&nbsp;View Details</button>&nbsp;&nbsp;
-																<button class="btn btn-default"><i class="fa fa-file-text"></i>&nbsp;&nbsp;View Report</button>
-															</div>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<strong>Info: </strong>
-														<ul class="list-group clearfix">
-															<li class="list-group-item">Sections: <span class="badge">(8)</span></li>
-															<li class="list-group-item success">Response required: <span class="badge">Yes</span></li>
-															<li class="list-group-item">Last Viewed: <span class="badge">29 Aug 2016 (by John Dopolopous)</span></li>
-															<li class="list-group-item">Last Modified: <span class="badge">n/a</span></li>
-														</ul>
-													</div>
-												</div>
-											</div>  
-										</div>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="grid-RiskRegister" class="grid-stack-item" data-gs-x="2" data-gs-y="35" data-gs-width="10" data-gs-height="10">
-							<div class="grid-stack-item-content well">
-								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
-								<div class="panel panel-primary">
-									<div class="panel-heading">
-										<i class="fa fa-life-saver fa-lg fa-fw"></i>&nbsp;&nbsp;<span class="heading">My School Risk Register</span>	
-									</div>
-									<div class="panel-body">
-										<div class="form-inline">
-											<div class="form-group">
-												<strong>Options:</strong> <button class="btn btn-default"><i class="fa fa-plus fa-fw"></i>Add New Item</button> 
-											</div>
-											
-											<div class="form-group">
-												<label>Add an e-Sort Recommended item:&nbsp;</label><select class="form-control"><option>-- Select --</option></select>&nbsp;&nbsp;<button class="btn btn-default"><i class="fa fa-plus fa-fw"></i>Add Selected</button>
-											</div>
-										</div>
-
-										<table id="tblRiskRegister" class="table table-striped table-bordered">
-											<thead>
-												<tr>
-													<th>Activity/Risk</th><th>Owner</th><th>Last update</th><th>Next Review</th><th>Rating</th><th>Risk Plan</th><th>Custom1</th><th>Custom2</th><th>Custom3</th><th></th><th></th><th></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Power Outage</td><td>John Smith</td><td>01 Jun 2016</td><td>01 Jun 2017</td><td class="text-danger"><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td><td>Yes</td><td>6</td><td>7</td><td>8</td><td><i class="fa fa-edit fa-fw fa-lg"></i></td><td><i class="fa fa-info fa-fw fa-lg"></i></td><td><i class="fa fa-remove fa-fw fa-lg"></i></td>
-												</tr>
-												<tr>
-													<td>Extreme Heat days</td><td>Jane Doe</td><td>01 Jun 2016</td><td>01 Jun 2017</td><td class="text-success"><i class="fa fa-star fa-fw"></i></td><td>No</td><td>6</td><td>7</td><td>8</td><td><i class="fa fa-edit fa-fw fa-lg"></i></td><td><i class="fa fa-info fa-fw fa-lg"></i></td><td><i class="fa fa-remove fa-fw fa-lg"></i></td>
-												</tr>
-												<tr>
-													<td>School Excursions</td><td>John Smith</td><td>01 Jun 2016</td><td>01 Jun 2017</td><td class="text-info"><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td><td>No</td><td>6</td><td>7</td><td>8</td><td><i class="fa fa-edit fa-fw fa-lg"></i></td><td><i class="fa fa-info fa-fw fa-lg"></i></td><td><i class="fa fa-remove fa-fw fa-lg"></i></td>
-												</tr>
-												<tr>
-													<td>Fire Extingushers Check</td><td>Jane Doe</td><td>01 Jun 2016</td><td>01 Jun 2017</td><td class="text-danger"><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td><td>No</td><td>6</td><td>7</td><td>8</td><td><i class="fa fa-edit fa-fw fa-lg"></i></td><td><i class="fa fa-info fa-fw fa-lg"></i></td><td><i class="fa fa-remove fa-fw fa-lg"></i></td>
-												</tr>
-												<tr>
-													<td>Evauation Drill</td><td>John Smith</td><td>01 Jun 2016</td><td>01 Jun 2017</td><td class="text-warning"><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i><i class="fa fa-star fa-fw"></i></td><td>Yes</td><td>6</td><td>7</td><td>8</td><td><i class="fa fa-edit fa-fw fa-lg"></i></td><td><i class="fa fa-info fa-fw fa-lg"></i></td><td><i class="fa fa-remove fa-fw fa-lg"></i></td>
-												</tr>
-												<tr>
-													<td>Severe sporting injury through incident</td><td>Jane Doe</td><td>01 Jun 2016</td><td>01 Jun 2017</td><td class="text-success"><i class="fa fa-star fa-fw"></i></td><td>Yes</td><td>6</td><td>7</td><td>8</td><td><i class="fa fa-edit fa-fw fa-lg"></i></td><td><i class="fa fa-info fa-fw fa-lg"></i></td><td><i class="fa fa-remove fa-fw fa-lg"></i></td>
-												</tr>
-											</tbody>
-										</table> 
-									</div>
-									<div class="panel-footer">
-										Colour key: <i class="fa fa-square fa-fw text-success"></i>My Items, <i class="fa fa-square fa-fw text-info"></i>e-Sort recommended Items, <i class="fa fa-square fa-fw text-danger"></i>e-SORT Mandatory Items
-									</div>
-								</div>
-							</div>
-						</div>
+						-->
 						<!--<div id="grid-eSORT-categoriesList" class="grid-stack-item" data-gs-x="2" data-gs-y="46" data-gs-width="5" data-gs-height="12">
 							<div class="grid-stack-item-content well">
 								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
@@ -2030,115 +2384,66 @@
 								</div>
 							</div>
 						</div>-->
-						<div id="grid-LibraryList" class="grid-stack-item" data-gs-x="2" data-gs-y="59" data-gs-width="5" data-gs-height="12">
-							<div class="grid-stack-item-content well">
-								<i class="fa fa-arrows pull-right" style="position:absolute; top:2px;right:2px;"></i>
-								<div class="panel panel-primary">
-									<div class="panel-heading">
-										<i class="fa fa-book"></i>	e-Sort Library List
-									</div>
-									<div class="panel-body">
-										<table id="pppTable" class="table table-striped table-bordered table-hover">
-											<thead><tr><th>PPP Title</th><th>Updated</th><th></th></tr></thead>
-											<tbody>
-												<tr>
-													<td>
-														Curriculum framework
-													</td>
-													<td>18/05/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-												<tr>
-													<td>
-														Compliance with the Working with Children Act 2005
-													</td>
-													<td>20/06/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-												<tr>
-													<td>
-														Democratic principles
-													</td>
-													<td>20/06/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-
-												<tr>
-													<td>
-														Monitoring and reporting on students' performance
-													</td>
-													<td>20/06/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-												<tr>
-													<td>
-														School's annual report that contains the mandatory information and is available to the community
-													</td>
-													<td>20/06/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-												<tr>
-													<td>
-														Student Discipline
-													</td>
-													<td>20/06/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-												<tr>
-													<td>
-														Teacher registration requirements
-													</td>
-													<td>20/06/2016</td>
-													<td><i class='fa fa-question fa-lg'></i></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-						
 
 					</div>
 				</div>
-
 			</div>
 		</div>
-	</div>
-	<hr />
-	&copy; Simon 2016
 
-	<!-- END Work Desk Panels -->
-	<script>
-		$(document).ready(function () {
-			var options = {
-				cell_height: 42,
-				vertical_margin: 15
-			};
-			$('.grid-stack').gridstack(options);
-			$("[data-toggle=popover]").popover();
-			$('#pppTable').DataTable({
-				responsive: true
+		<hr />
+		&copy; Simon 2016
+
+		<!-- END Work Desk Panels -->
+		<script>
+			$(document).ready(function () {
+				var options = {
+					cell_height: 42,
+					vertical_margin: 15
+				};
+				//$('.grid-stack').gridstack(options);
+				$("[data-toggle=popover]").popover();
+				$('#pppTable').DataTable({
+					responsive: true
+				});
+				$('#tblRiskRegister').DataTable({
+					responsive: true, 'paging': false, 'columnDefs': [{ 'orderable': false, 'targets': [9, 10, 11] }]
+				});
 			});
-			$('#tblRiskRegister').DataTable({
-				responsive: true, 'paging': false, 'columnDefs': [{ 'orderable': false, 'targets': [9,10,11]}]
-			});
-			//notificationForm();
-		});
 
-		function toggles(val) {
-			$('#noticeToggle' + val).toggleClass('fa-chevron-down');
-			$('#noticeToggle' + val).toggleClass('fa-chevron-up');
-		}
-		function togglesLeftChevron(id) {
-			$(id).toggleClass('fa-folder-open-o');
-			$(id).toggleClass('fa-angle-down');
-		}
+			function toggles(val) {
+				$('#noticeToggle' + val).toggleClass('fa-chevron-down');
+				$('#noticeToggle' + val).toggleClass('fa-chevron-up');
+			}
+			function togglesLeftChevron(id) {
+				$(id).toggleClass('fa-folder-open-o');
+				$(id).toggleClass('fa-angle-down');
+			}
 
-		function notificationForm() {
-			$('#sectionModal').modal({ show: true, backdrop: 'static', keyboard: false });
-		}
+			function notificationForm() {
+				$('#sectionModal').modal({ show: true, backdrop: 'static', keyboard: false });
+			}
 
-	</script>
+			function demoNotification() {
+				//toggle panel to green, and show user has viewed item.
+				$('#abcDraft').toggleClass('simon-message-warning');
+				$('#abcDraft').toggleClass('simon-message-success');
+				$('#abcDraftbadge').html(getDate() + ' (by Rory Walsh)');
+			}
+
+			function getDate() {
+				var d = new Date();
+				var month = d.getMonth() + 1;
+				var day = d.getDate();
+
+				var output = (day < 10 ? '0' : '') + day + '/' + (month < 10 ? '0' : '') + month + '/' + d.getFullYear();
+
+				return output;
+			}
+
+			function toggleModalsForDemo() {
+				$('#modal-e-SortCategoryDocs').modal('hide');
+				$('#modal-importWizard').modal('show');
+			}
+		</script>
 </body>
 </html>
